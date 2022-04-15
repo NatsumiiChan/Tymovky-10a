@@ -20,4 +20,15 @@ Dolnění nové stránky
 v0.4 (15.04) (Marek)
 Úprava modálu pro správné fungování při změnšení velikosti
 Doplnění kartiček
+Přidána funkce pro email
 Přidány animace pro modál
+
+v0.5 (15.04) (Marek)
+Upraven modál
+Upraveno tělo, aby při otevření modalu nešlo scrollovat
+Modál v samostatném JS souboru
+Doplnění a upravení fotek
+Upravena chyba v Emailu a jeho animaci
+Upraven čas animací
+Upravena velikost scrollbaru
+Upravena animace ZVS

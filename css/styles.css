@@ -9,19 +9,19 @@ body{
 /*Scrollbar*/
 
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #ddd; 
+    background: #ddd;
 }
    
 ::-webkit-scrollbar-thumb {
-    background: #333; 
+    background: #333;
 }
   
 ::-webkit-scrollbar-thumb:hover {
-    background: #111; 
+    background: #111;
 }
 
 /*Záhlavý*/
@@ -152,7 +152,7 @@ body{
 .autor{
     text-transform: uppercase;
     cursor: pointer;
-    width: 48vw;
+    width: 40vw;
 }
 
 .autor1{
@@ -202,11 +202,11 @@ body{
     height: 100vh;
     width: 100vw;
     overflow-y: scroll;
-    animation:  okno_zpusobove-animace-otevreni 0.3s;
+    animation:  okno_zpusobove-animace-otevreni 0.5s;
 }
 
 .okno_zaviraci{
-    animation:  okno_zpusobove-animace-zavreni 0.31s;
+    animation:  okno_zpusobove-animace-zavreni 0.51s;
 }
 
 .zavirac{
@@ -300,7 +300,7 @@ body{
 .fotecka_v_karticce{
     margin: -10px -10px 10px -10px;
     border-radius: 5px 5px 0 0;
-    max-width: 25vw;
+    max-width: 26vw;
 }
 
 /*Tlačítka*/
@@ -322,8 +322,8 @@ body{
 
 /*Animace*/
 
-.tlacitko_zpusobove:hover, .tlacitko_zpusobove, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko, .tlacitka, .tlacitka:hover, .eamil, .email:hover{
-    transition: 0.3s;
+.tlacitko_zpusobove:hover, .tlacitko_zpusobove, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko, .tlacitka, .tlacitka:hover, .email, .email:hover{
+    transition: 0.2s;
 }
 
 /*Animace pro modál*/
@@ -336,4 +336,21 @@ body{
 @keyframes okno_zpusobove-animace-zavreni{
     0% {opacity:100;}
     100% {opacity:0;}
+}
+
+
+/*Animace Zastavte Všemi Prostředky*/
+
+
+.zvs{
+    width: 26vw;
+    height: 26vw;
+    animation: zvs 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes zvs{
+    0% {background: url("../karticky/nav_na_hv_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../karticky/nav_na_hv_0.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../karticky/nav_na_hv_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
 }
