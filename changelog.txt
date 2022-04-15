@@ -1,0 +1,19 @@
+V 0.1 (12.04) (Marek)
+Vyvtoření základní webové stránky a šablony.
+Doplnění obrázků a věcí pro šablonu.
+
+v0.2 (13.04) (Marek)
+Úprava základní webové stránky a šablony.
+Výměna a úprava obrázků.
+Úprava style.css pro menší velikost.
+Úprava style.css pro větší přehlednost.
+Vytvoření další webové stránky o základních informacích a potřebných věcí pro ní.
+Doplnění informací.
+
+v0.3 (15.04) (Marek)
+Úprava šablony
+Vytvoření modálního okna
+Úprava style.css pro menší velikost
+Doplnění animací
+Dolnění nové stránky
+

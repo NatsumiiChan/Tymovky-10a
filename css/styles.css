@@ -1,8 +1,30 @@
+/*Samotné tělo*/
+
 body{
     font-family: "Source Sans Pro", sans-serif;
     margin: 0;
     background-color: #ddd;
 }
+
+/*Scrollbar*/
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ddd; 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #333; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #111; 
+}
+
+/*Záhlavý*/
 
 .home_img{
     max-width: 100%;
@@ -10,14 +32,13 @@ body{
 }
 
 .zahlavi{
-    margin: 0;
-    max-width: 100%;
-    min-width: 100%;
+    font-size: 0;
     cursor: pointer;
 }
 
+/*Navigace*/
+
 .navigace{
-    margin-top: 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -29,93 +50,217 @@ body{
     top: 0;
     left: 0;
     background-color: #333;
-    margin-top: -1vh;
+    box-shadow: 0px 2px 3px 1px #000;
 }
 
-.tlacitko{
+.tlacitko, .tlacitko_aktualni{
     cursor: pointer;
     background-color: #111;
-    color: #bbb;
     padding: 10px;
     border-style: solid;
-    border-color: #bbb;
     border-width: 2px;
     border-radius: 4px;
     font-size: x-large;
     font-weight: bold;
-    box-shadow: 3px 3px 5px 1px #222;
     user-select: none;
 }
 
-.tlacitko:hover{
+.tlacitko{
+    color: #bbb;
+    border-color: #bbb;
+    box-shadow: 3px 3px 5px 1px #222;
+}
+
+.tlacitko_aktualni, .tlacitko:hover{
     color: #fff;
     border-color: #fff;
     box-shadow: 3px 3px 5px 1px #000;
 }
 
-.nadpis{
-    font-size: xxx-large;
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
+/*Různé flexboxy na stránce*/
+
+.kontejner_dolu, .kontejner_dolu_dvojity{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.kontejner_dolu{
+    margin: 20px;
+}
+
+.kontejner_dolu_dvojity{
+    width: 37vw;
+}
+
+.kontejner_vpravo, .kontejner_vpravo_carkovaty{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 40px;
+}
+
+.kontejner_vpravo{
+    justify-content: center;
+    align-items: center;
+}
+
+.kontejner_vpravo_carkovaty{
+    justify-content: flex-start;    
+    align-items: stretch;
+}
+
+/*Různé čárky na stránce*/
+
+.carka_vodorovna, .carka_svisla, .carka_svisla_velka{
+    border-style: solid;
+    border-color: #333;
+    border-width: 2px;
+    border-radius: 2px;
+}
+
+.carka_vodorovna{
+    width: 90%;
+}
+
+.carka_svisla{
+    height: 2rem;
+}
+
+/*Různé texty na stránce*/
+
+.pismenka_za_sebou, .pismenka_za_sebou_mensi, .email, .autor{
+    font-size: larger;
     text-align: center;
 }
 
+.email{
+    text-transform: uppercase;
+}
+
+.pismenka_za_sebou{
+    max-width: 80vw;
+}
+
+.pismenka_za_sebou_mensi{
+    max-width: 50vw;
+}
+
 .autor{
-    font-size: larger;
     text-transform: uppercase;
     cursor: pointer;
+    width: 10vw;
 }
 
 .autor:hover{
     color: #555;
 }
 
-.kontejner_dolu{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    margin: 20px;
-}
-
-.kontejner_vpravo{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-}
-
-.carka_vodorovna{
-    border-style: solid;
-    border-color: #333;
-    border-width: 2px;
-    border-radius: 2px;
-    width: 90%;
-}
-
-.carka_svisla{
-    border-style: solid;
-    border-color: #333;
-    border-width: 2px;
-    border-radius: 2px;
-    height: 2rem;
-}
-
-.email{
-    font-size: large;
+.nadpis, .nadpis_mensi{
+    font-weight: bold;
+    text-align: center;
     text-transform: uppercase;
 }
 
-.pismenka_za_sebou{
-    font-size: larger;
-    text-align: center;
+.nadpis{
+    font-size: xxx-large;
 }
+
+.nadpis_mensi{
+    font-size: xx-large;
+
+}
+
+/*Různé obrázky na stránce*/
 
 .autor_img{
     box-shadow: 5px 5px 5px 1px #222;
     border-radius: 5px;
+}
+
+/*Potřebné věci k modálním oknům*/
+
+.nic{
+    display: none;
+}
+
+.okno_zpusobove, .zavirac{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.zavirac{
+    z-index: 1;
+    cursor: pointer;
+    user-select: none;
+}
+
+.okno_zpusobove, .kontejner_zpusobovy_dolu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.okno_zpusobove{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.kontejner_zpusobovy_dolu{
+    flex-wrap: nowrap;
+}
+
+.kontejner_zpusobovy{
+    background-color: #fff;
+    z-index: 10;
+    padding: 20px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    margin-left: 10px;
+    margin-right: 20px;
+    box-shadow: 3px 3px 5px 1px #222;
+}  
+
+#zaviratel, .zpusobove_tlacitko{
+    cursor: pointer;
+    user-select: none;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #bbb;
+}
+
+#zaviratel{
+    padding: 5px;
+    border-radius: 50%;
+    float: right;
+    margin: -38px;
+}
+
+#zaviratel:hover{
+    background-color: #fff;
+    font-weight: bolder;
+}
+
+.zpusobove_tlacitko{
+    padding: 10px;
+    border-radius: 4px;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.zpusobove_tlacitko:hover{
+    background-color: #ddd;
+}
+
+/*Animace*/
+
+.zpusobove_tlacitko:hover, .zpusobove_tlacitko, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko{
+    transition: 0.3s;
 }
