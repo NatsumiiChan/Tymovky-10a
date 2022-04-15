@@ -1,0 +1,121 @@
+body{
+    font-family: "Source Sans Pro", sans-serif;
+    margin: 0;
+    background-color: #ddd;
+}
+
+.home_img{
+    max-width: 100%;
+    min-width: 100%;
+}
+
+.zahlavi{
+    margin: 0;
+    max-width: 100%;
+    min-width: 100%;
+    cursor: pointer;
+}
+
+.navigace{
+    margin-top: 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    margin-top: -1vh;
+}
+
+.tlacitko{
+    cursor: pointer;
+    background-color: #111;
+    color: #bbb;
+    padding: 10px;
+    border-style: solid;
+    border-color: #bbb;
+    border-width: 2px;
+    border-radius: 4px;
+    font-size: x-large;
+    font-weight: bold;
+    box-shadow: 3px 3px 5px 1px #222;
+    user-select: none;
+}
+
+.tlacitko:hover{
+    color: #fff;
+    border-color: #fff;
+    box-shadow: 3px 3px 5px 1px #000;
+}
+
+.nadpis{
+    font-size: xxx-large;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.autor{
+    font-size: larger;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.autor:hover{
+    color: #555;
+}
+
+.kontejner_dolu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 20px;
+}
+
+.kontejner_vpravo{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.carka_vodorovna{
+    border-style: solid;
+    border-color: #333;
+    border-width: 2px;
+    border-radius: 2px;
+    width: 90%;
+}
+
+.carka_svisla{
+    border-style: solid;
+    border-color: #333;
+    border-width: 2px;
+    border-radius: 2px;
+    height: 2rem;
+}
+
+.email{
+    font-size: large;
+    text-transform: uppercase;
+}
+
+.pismenka_za_sebou{
+    font-size: larger;
+    text-align: center;
+}
+
+.autor_img{
+    box-shadow: 5px 5px 5px 1px #222;
+    border-radius: 5px;
+}

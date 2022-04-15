@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="icon" href="../images/ikonka.png">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
+        <meta name="keywords" content="Návěsti, Železnice, Návěstidla">
+        <meta name="description" content="Návěstidla">
+        <title>Návěstidla</title>
+    </head>
+    <body>
+
+        <!--Záhlavní obrázek-->
+        <div class = "zahlavi" onclick="location.href='../index.html';">
+        </div>
+
+        <!--Navigace a tlačítka v ní-->
+        <div class="navigace">
+            <div class="tlacitko" onclick="location.href='zakladni_info.html';">
+                Základní informace
+            </div>
+            <div class="tlacitko_aktualni" onclick="location.href='navesti.html';">
+                Návěsti
+            </div>
+            <div class="tlacitko" onclick="location.href='hledac.html';">
+                Hledání návěsti
+            </div>
+            <div class="tlacitko" onclick="location.href='test.html';">
+                Test
+            </div>
+        </div>
+
+        <!--Obsah-->
+        <div class="kontejner_dolu">
+            <div class="nadpis">
+                Návěstidla, jejich význam a dělení
+            </div>
+            <div class="pismenka za sebou">
+                Zde máte návěstidla rozřazena dle různých kategorií. V každé kategorii najdete návěstidla, jejich definici a ukázku.
+            </div>
+            <div class="zpusobove_tlacitko" onclick="zpusobove_okno()">
+                Dělení kategorií
+            </div>
+        </div>
+
+        <!--Způsobové okno-->
+        <div id="zpusobovy_nositel" class="nic">
+            <div class="zavirac" onclick="zpusobove_okno()">
+            </div>
+            <div class="kontejner_zpusobovy">
+                <div id="zaviratel" class="material-icons" onclick="zpusobove_okno()">
+                    close
+                </div>
+                <div clas="kontejner_zpusobovy_dolu">
+                    <div class="nadpis">
+                        Dělení kategorií návěstidel
+                    </div>
+                    <div class="pismenka_za_sebou">
+                        blablabla
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Zápatí-->
+        <div class="kontejner_dolu">
+            <div class="carka_vodorovna">
+            </div>
+            <div class="kontejner_vpravo">
+                <div class="autor" onclick="window.open('https://steamcommunity.com/id/Maranaczech', '_blank');">
+                    Marana_CZE
+                </div>
+                <div class="carka_svisla">
+                </div>
+                <div class="autor" onclick="window.open('https://steamcommunity.com/id/natsumiminako', '_blank');">
+                    Natsumi Chan
+                </div>
+            </div>
+            <div class="carka_vodorovna">
+            </div>
+            <div class="email">
+                info@marana-cze.eu
+            </div>
+        </div>
+
+        <!--Link na základní script-->
+        <script src="../script/start2.js"></script>
+
+        <!--By Marana_CZE-->
+    </body>
+</html>
