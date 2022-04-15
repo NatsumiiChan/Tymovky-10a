@@ -10,10 +10,14 @@ Výměna a úprava obrázků.
 Vytvoření další webové stránky o základních informacích a potřebných věcí pro ní.
 Doplnění informací.
 
-v0.3 (15.04) (Marek)
+v0.3 (14.04) (Marek)
 Úprava šablony
 Vytvoření modálního okna
 Úprava style.css pro menší velikost
 Doplnění animací
 Dolnění nové stránky
 
+v0.4 (15.04) (Marek)
+Úprava modálu pro správné fungování při změnšení velikosti
+Doplnění kartiček
+Přidány animace pro modál

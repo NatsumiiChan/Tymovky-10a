@@ -60,7 +60,7 @@ body{
     border-style: solid;
     border-width: 2px;
     border-radius: 4px;
-    font-size: x-large;
+    font-size: 1.5rem;
     font-weight: bold;
     user-select: none;
 }
@@ -131,13 +131,14 @@ body{
 
 /*Různé texty na stránce*/
 
-.pismenka_za_sebou, .pismenka_za_sebou_mensi, .email, .autor{
+.pismenka_za_sebou, .pismenka_za_sebou_mensi, .email{
     font-size: larger;
     text-align: center;
 }
 
 .email{
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .pismenka_za_sebou{
@@ -151,11 +152,19 @@ body{
 .autor{
     text-transform: uppercase;
     cursor: pointer;
-    width: 10vw;
+    width: 48vw;
 }
 
-.autor:hover{
-    color: #555;
+.autor1{
+    text-align: right;
+}
+
+.autor2{
+    text-align: left;
+}
+
+.autor:hover, .email:hover{
+    text-shadow: 5px 5px 10px #222;
 }
 
 .nadpis, .nadpis_mensi{
@@ -165,11 +174,11 @@ body{
 }
 
 .nadpis{
-    font-size: xxx-large;
+    font-size: 2rem;
 }
 
 .nadpis_mensi{
-    font-size: xx-large;
+    font-size: 1.5rem;
 
 }
 
@@ -192,6 +201,12 @@ body{
     left: 0;
     height: 100vh;
     width: 100vw;
+    overflow-y: scroll;
+    animation:  okno_zpusobove-animace-otevreni 0.3s;
+}
+
+.okno_zaviraci{
+    animation:  okno_zpusobove-animace-zavreni 0.31s;
 }
 
 .zavirac{
@@ -200,12 +215,18 @@ body{
     user-select: none;
 }
 
-.okno_zpusobove, .kontejner_zpusobovy_dolu{
+.okno_zpusobove, .kontejner_zpusobovy_dolu, .okno_zpusobove_true{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
+}
 
+.okno_zpusobove_true{
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: flex-start;
+    padding-top: 10px;
 }
 
 .okno_zpusobove{
@@ -214,6 +235,7 @@ body{
 
 .kontejner_zpusobovy_dolu{
     flex-wrap: nowrap;
+    gap: 15px;
 }
 
 .kontejner_zpusobovy{
@@ -223,18 +245,9 @@ body{
     border-style: solid;
     border-width: 2px;
     border-radius: 8px;
-    margin-left: 10px;
-    margin-right: 20px;
+    margin: 10px 0 20px 0;
     box-shadow: 3px 3px 5px 1px #222;
 }  
-
-#zaviratel, .zpusobove_tlacitko{
-    cursor: pointer;
-    user-select: none;
-    border-style: solid;
-    border-width: 2px;
-    background-color: #bbb;
-}
 
 #zaviratel{
     padding: 5px;
@@ -248,19 +261,79 @@ body{
     font-weight: bolder;
 }
 
-.zpusobove_tlacitko{
+#zaviratel, .tlacitko_zpusobove, .tlacitka{
+    cursor: pointer;
+    user-select: none;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #bbb;
+}
+
+/*Kartičky*/
+
+.karticky_ve_flexu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.karticka{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; 
+    background-color: #fff;
+    box-shadow: 3px 3px 5px 1px #222;
+    border-style: solid;
+    border-color: #333;
+    border-width: 2px;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 25vw;
+}
+
+.fotecka_v_karticce{
+    margin: -10px -10px 10px -10px;
+    border-radius: 5px 5px 0 0;
+    max-width: 25vw;
+}
+
+/*Tlačítka*/
+
+.tlacitko_zpusobove, .tlacitka{
     padding: 10px;
     border-radius: 4px;
-    font-size: larger;
+    font-size: 1.25rem;
     font-weight: bolder;
 }
 
-.zpusobove_tlacitko:hover{
+.tlacitko_zpusobove:hover{
     background-color: #ddd;
+}
+
+.tlacitka:hover{
+    background-color: #fff;
 }
 
 /*Animace*/
 
-.zpusobove_tlacitko:hover, .zpusobove_tlacitko, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko{
+.tlacitko_zpusobove:hover, .tlacitko_zpusobove, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko, .tlacitka, .tlacitka:hover, .eamil, .email:hover{
     transition: 0.3s;
+}
+
+/*Animace pro modál*/
+
+@keyframes okno_zpusobove-animace-otevreni{
+    0% {opacity:0;}
+    100% {opacity:100;}
+}
+
+@keyframes okno_zpusobove-animace-zavreni{
+    0% {opacity:100;}
+    100% {opacity:0;}
 }
