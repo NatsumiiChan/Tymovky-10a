@@ -1,5 +1,9 @@
 /*Samotné tělo*/
 
+html{
+    overflow: overlay;
+}
+
 body{
     font-family: "Source Sans Pro", sans-serif;
     margin: 0;
@@ -9,15 +13,12 @@ body{
 /*Scrollbar*/
 
 ::-webkit-scrollbar {
-    width: 5px;
-}
-
-::-webkit-scrollbar-track {
-    background: #ddd;
+    width: 6px;
 }
    
 ::-webkit-scrollbar-thumb {
     background: #333;
+    border-radius: 3px;
 }
   
 ::-webkit-scrollbar-thumb:hover {
@@ -211,7 +212,6 @@ body{
 
 .zavirac{
     z-index: 1;
-    cursor: pointer;
     user-select: none;
 }
 
@@ -245,7 +245,7 @@ body{
     border-style: solid;
     border-width: 2px;
     border-radius: 8px;
-    margin: 10px 0 20px 0;
+    margin: 10px 20px 20px 20px;
     box-shadow: 3px 3px 5px 1px #222;
 }  
 
@@ -290,22 +290,55 @@ body{
     background-color: #fff;
     box-shadow: 3px 3px 5px 1px #222;
     border-style: solid;
-    border-color: #333;
+    border-color: #222;
     border-width: 2px;
     border-radius: 8px;
     padding: 10px;
-    max-width: 25vw;
+    max-width: 400px;
+    overflow: hidden;
+    cursor: pointer;
 }
 
 .fotecka_v_karticce{
-    margin: -10px -10px 10px -10px;
-    border-radius: 5px 5px 0 0;
-    max-width: 26vw;
+    margin: -10px -15px 10px -10px;
+    max-width: 400px;
 }
+
+.carka{
+    width: 300px;
+    margin: -25px -15px -10px -10px;
+    border-style: solid;
+    border-radius: 2px;
+    border-color: #222;
+    border-width: 2px;
+}
+
+.text_odkazovy{
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    margin: 15px;
+    max-width: 300px;
+    min-height: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1px;
+}
+
+.karticka:hover .text_odkazovy{
+    text-shadow: 5px 5px 10px #222;
+}
+
+.karticka:hover .carka{
+    width: 350px;
+}
+
 
 /*Tlačítka*/
 
-.tlacitko_zpusobove, .tlacitka{
+.tlacitko_zpusobove{
     padding: 10px;
     border-radius: 4px;
     font-size: 1.25rem;
@@ -316,17 +349,13 @@ body{
     background-color: #ddd;
 }
 
-.tlacitka:hover{
-    background-color: #fff;
-}
-
 /*Animace*/
 
-.tlacitko_zpusobove:hover, .tlacitko_zpusobove, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko, .tlacitka, .tlacitka:hover, .email, .email:hover{
+.tlacitko_zpusobove:hover, .tlacitko_zpusobove, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko, .email, .email:hover, .text_odkazovy, .text_odkazovy:hover, .carka, .carka:hover{
     transition: 0.2s;
 }
 
-/*Animace pro modál*/
+/*Keyframes pro modál*/
 
 @keyframes okno_zpusobove-animace-otevreni{
     0% {opacity:0;}
@@ -336,21 +365,4 @@ body{
 @keyframes okno_zpusobove-animace-zavreni{
     0% {opacity:100;}
     100% {opacity:0;}
-}
-
-
-/*Animace Zastavte Všemi Prostředky*/
-
-
-.zvs{
-    width: 26vw;
-    height: 26vw;
-    animation: zvs 2s;
-    animation-iteration-count: infinite;
-}
-
-@keyframes zvs{
-    0% {background: url("../karticky/nav_na_hv_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
-    50% {background: url("../karticky/nav_na_hv_0.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
-    100% {background: url("../karticky/nav_na_hv_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
 }

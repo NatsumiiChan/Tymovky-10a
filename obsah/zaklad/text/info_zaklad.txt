@@ -1,0 +1,46 @@
+                    <div class="nadpis_mensi">
+                        Hlavní návěstidla
+                    </div>
+                    <div class="pismenka_za_sebou">
+                        To jsou vpodstatě takové semafory na železnici
+                    </div>
+                    <div class="oddelovac">
+                    </div>
+                    <div class="nadpis_mensi">
+                        Slyšitelné návěsti
+                    </div>
+                    <div class="pismenka_za_sebou">
+                        To jsou návěsti které se návěstí zvukem
+                    </div>
+                    <div class="oddelovac">
+                    </div>
+                    <div class="nadpis_mensi">
+                        Rychlostníky
+                    </div>
+                    <div class="pismenka_za_sebou">
+                        To jsou vpodstatě takové značky upravující rychlost
+                    </div>
+                    <div class="oddelovac">
+                    </div>
+                    <div class="nadpis_mensi">
+                        Ruční návěsti
+                    </div>
+                    <div class="pismenka_za_sebou">
+                        To jsou návěsti, které se návěstí ručně
+                    </div>
+                    <div class="oddelovac">
+                    </div>
+                    <div class="nadpis_mensi">
+                        Návěsti na HV
+                    </div>
+                    <div class="pismenka_za_sebou">
+                        To jsou návěsti, které se návěstí pomocí světel na Hnacím Vozidle.
+                    </div>
+                    <div class="oddelovac">
+                    </div>
+                    <div class="nadpis_mensi">
+                        Další návěsti
+                    </div>
+                    <div class="pismenka_za_sebou">
+                        Zde jsem umístil zbylé zajimavé návěsti
+                    </div>

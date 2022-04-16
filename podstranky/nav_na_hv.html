@@ -7,9 +7,9 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
         <link rel="icon" href="../images/ikonka.png">
-        <meta name="keywords" content="Návěsti, Železnice, Návěstidla">
+        <meta name="keywords" content="Návěsti na HV, HV, Hnací Vozidla">
         <meta name="description" content="Návěstidla">
-        <title>Návěstidla</title>
+        <title>Návěstidla na HV</title>
     </head>
     <body id="body">
 
@@ -36,62 +36,63 @@
         <!--Obsah-->
         <div class="kontejner_dolu">
             <div class="nadpis">
-                Návěstidla, jejich význam a dělení
+                Návěstidla na hnacích vozidlech
             </div>
             <div class="pismenka za sebou">
-                Zde máte návěstidla rozřazena dle různých kategorií. V každé kategorii najdete návěstidla, jejich definici a ukázku.
+                Zde máte návěsti, které je možné návěstit na HV
             </div>
             <div class="tlacitko_zpusobove" onclick="zpusobove_okno()">
-                Dělení kategorií
+                Doplňující informace
             </div>
             <div class="karticky_ve_flexu">
-                <div class="karticka" onclick="location.href='rychlostniky.html';">
-                    <img src="../karticky/rychlostnik.png" alt="rychlostniky" class="fotecka_v_karticce">
+                <div class="karticka" onclick="">
+                    <img src="../obsah/nav_na_hv/img/zacatek.png" alt="Začátek vlaku" class="fotecka_v_karticce">
                     <div class="carka">
                     </div>
                     <div class="text_odkazovy">
-                        Rychlostníky
+                        Začátek vlaku
                     </div>
                 </div>
-                <div class="karticka" onclick="location.href='hl_nav.html';">
-                    <img src="../karticky/hl_nav.png" alt="Hlavní návěstidla" class="fotecka_v_karticce">
+                <div class="karticka" onclick="">
+                    <img src="../obsah/nav_na_hv/img/zacatek_nedorozumi.png" alt="Začátek vlaku za nemožného dorozumění" class="fotecka_v_karticce">
                     <div class="carka">
                     </div>
                     <div class="text_odkazovy">
-                        Hlavní návěstidla
+                        Začátek vlaku za nemožného dorozumění
                     </div>
                 </div>
-                <div class="karticka" onclick="location.href='slys_nav.html';">
-                    <img src="../karticky/slys_nav.png" alt="Slyšitelné návěsti" class="fotecka_v_karticce">
+                <div class="karticka" onclick="">
+                    <div alt="Konec vlaku" class="fotecka_v_karticce konec">
+                    </div>
                     <div class="carka">
                     </div>
                     <div class="text_odkazovy">
-                        Slyšitelné návěsti
+                        Konec vlaku
                     </div>
                 </div>
-                <div class="karticka" onclick="location.href='ruc_nav.html';">
-                    <img src="../obsah/ruc_nav/img/nekratte.png" alt="Ruční návěsti" class="fotecka_v_karticce">
+                <div class="karticka" onclick="">
+                    <img src="../obsah/nav_na_hv/img/posun.png" alt="HV při posunu" class="fotecka_v_karticce">
                     <div class="carka">
                     </div>
                     <div class="text_odkazovy">
-                        Ruční návěsti
+                        HV při posunu
                     </div>
                 </div>
-                <div class="karticka" onclick="location.href='nav_na_hv.html';">
-                    <div alt="Návěsti na HV" class="fotecka_v_karticce zvs">
-                    </div>
+                <div class="karticka" onclick="">
+                    <img src="../obsah/nav_na_hv/img/obsazeno.png" alt="HV obsazeno" class="fotecka_v_karticce">
                     <div class="carka">
                     </div>
                     <div class="text_odkazovy">
-                        Návěsti na HV
+                        HV obsazeno
                     </div>
                 </div>
-                <div class="karticka" onclick="location.href='dalsi.html';">
-                    <img src="../karticky/dalsi.png" alt="Další návěsti" class="fotecka_v_karticce">
+                <div class="karticka" onclick="">
+                    <div alt="ZVS" class="fotecka_v_karticce zvs">
+                    </div>
                     <div class="carka">
                     </div>
                     <div class="text_odkazovy">
-                        Další návěsti
+                        ZVS
                     </div>
                 </div>
             </div>
@@ -101,63 +102,65 @@
 
         <!--Způsobové okno-->
         <div id="zpusobovy_nositel" class="nic">
-            <div class="zavirac" onclick="zpusobove_okno('zaklad','info_zaklad')">
+            <div class="zavirac" onclick="zpusobove_okno()">
             </div>
             <div class="kontejner_zpusobovy">
                 <div id="zaviratel" class="material-icons" onclick="zpusobove_okno()">
                     close
                 </div>
-                <div class="kontejner_zpusobovy_dolu" id="vsunovac">
+                <div class="kontejner_zpusobovy_dolu">
                     <div class="nadpis">
-                        Dělení kategorií návěstidel
+                        Doplňující informace o použitých pojmech
                     </div>
                     <div class="oddelovac">
                     </div>
                     <div class="nadpis_mensi">
-                        Hlavní návěstidla
+                        HV = Hnací Vozidlo
                     </div>
                     <div class="pismenka_za_sebou">
-                        To jsou vpodstatě takové semafory na železnici
+                        Je to vozidlo schopné  vyvíjet tažnou,brzdící sílu potřebnou pro pohyb. Patří sem lokomotivy i jednotky, případně i řídící vůz, je-li v čele vlaku/posunového oddílu.
                     </div>
                     <div class="oddelovac">
                     </div>
                     <div class="nadpis_mensi">
-                        Slyšitelné návěsti
+                        Jízda za nemožného dorozumění
                     </div>
                     <div class="pismenka_za_sebou">
-                        To jsou návěsti které se návěstí zvukem
+                        Je to návěst upozorňující zaměstnance na jízdu vlaku podle rozhledových poměrů a za nemožného dorozumění.
                     </div>
                     <div class="oddelovac">
                     </div>
                     <div class="nadpis_mensi">
-                        Rychlostníky
+                        Posun
                     </div>
                     <div class="pismenka_za_sebou">
-                        To jsou vpodstatě takové značky upravující rychlost
+                        Jedná se o činnost řízenou například posunovačem, strojvedoucím, výpravčím. Jedná se o činnost, kdy nedochází k jízdě vlaku. Spadá sem jak například stlačení/popotažení soupravy, tak i posun proveden posunovacími zálohy.
                     </div>
                     <div class="oddelovac">
                     </div>
                     <div class="nadpis_mensi">
-                        Ruční návěsti
+                        PMD = Posun Mezi Dopravnami
                     </div>
                     <div class="pismenka_za_sebou">
-                        To jsou návěsti, které se návěstí ručně
+                        Jedná se o posun, při kterém posunový díl opustí stanici a vjede na trať.
                     </div>
                     <div class="oddelovac">
                     </div>
                     <div class="nadpis_mensi">
-                        Návěsti na HV
+                        Vlak
                     </div>
                     <div class="pismenka_za_sebou">
-                        To jsou návěsti, které se návěstí pomocí světel na Hnacím Vozidle.
+                        Jedná se o soupravu vozidel, v které máme minimálně jedno HV. Jízda se řídí pomocí jízdního řádu. Vlak musí být opatřen návěstmi "začátek vlaku" a "konec vlaku", taktéž musí být opatřen vlakovým doprovodem.
                     </div>
                     <div class="oddelovac">
                     </div>
                     <div class="nadpis_mensi">
-                        Další návěsti
+                        ZVS = Zastavte Všemi Prostředky
                     </div>
                     <div class="pismenka_za_sebou">
-                        Zde jsem umístil zbylé zajimavé návěsti
+                        Touto návěstí je strojvedoucímu přikázáno zastavit HV při použití všech dostupných prostředků.
+                    </div>
+                    <div class="oddelovac">
                     </div>
                 </div>
             </div>

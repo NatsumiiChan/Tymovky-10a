@@ -32,3 +32,10 @@ Upravena chyba v Emailu a jeho animaci
 Upraven čas animací
 Upravena velikost scrollbaru
 Upravena animace ZVS
+
+v0.6 (16.04) (Marek)
+Přetvořeny kartičky
+Přidány další stránky
+Upraven scrollbar
+Návěsti v souboru styles.css přesunuty do souboru navesti.css
+Přidány další animace

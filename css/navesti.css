@@ -1,0 +1,120 @@
+/*Animace Návěstí*/
+
+.zvs, .konec, .privolavacka, .prevzeti, .odjezd, .zvs_rucni, .stuj, .vystraha{
+    width: 400px;
+    height: 400px;
+}
+.zvs{
+    animation: zvs 2s;
+    animation-iteration-count: infinite;
+}
+
+.konec{
+    animation: konec 5s;
+    animation-iteration-count: infinite;
+}
+
+.privolavacka{
+    animation: privolavacka 5s;
+    animation-iteration-count: infinite;
+}
+
+.prevzeti{
+    animation: prevzeti 5s;
+    animation-iteration-count: infinite;
+}
+
+.odjezd{
+    animation: odjezd 5s;
+    animation-iteration-count: infinite;
+}
+
+.zvs_rucni{
+    animation: zvs_rucni 5s;
+    animation-iteration-count: infinite;
+}
+
+.stuj{
+    animation: stuj 5s;
+    animation-iteration-count: infinite;
+}
+
+.vystraha{
+    animation: vystraha 5s;
+    animation-iteration-count: infinite;
+}
+
+
+/*Keyframes animací*/
+
+@keyframes stuj{
+    0% {background: url("../obsah/ruc_nav/img/stuj.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    25% {background: url("../obsah/ruc_nav/img/stuj.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    33% {background: url("../obsah/ruc_nav/img/stuj_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    58% {background: url("../obsah/ruc_nav/img/stuj_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    66% {background: url("../obsah/ruc_nav/img/stuj_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    92% {background: url("../obsah/ruc_nav/img/stuj_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/stuj.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes vystraha{
+    0% {background: url("../obsah/ruc_nav/img/vystraha.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    42% {background: url("../obsah/ruc_nav/img/vystraha.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/vystraha_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    92% {background: url("../obsah/ruc_nav/img/vystraha_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/vystraha.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes zvs_rucni{
+    0% {background: url("../obsah/ruc_nav/img/zvs.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    25% {background: url("../obsah/ruc_nav/img/zvs.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    33% {background: url("../obsah/ruc_nav/img/zvs_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    58% {background: url("../obsah/ruc_nav/img/zvs_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    66% {background: url("../obsah/ruc_nav/img/zvs_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    92% {background: url("../obsah/ruc_nav/img/zvs_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/zvs.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes odjezd{
+    0% {background: url("../obsah/ruc_nav/img/odjezd.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    17% {background: url("../obsah/ruc_nav/img/odjezd.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    25% {background: url("../obsah/ruc_nav/img/odjezd_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    42% {background: url("../obsah/ruc_nav/img/odjezd_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/odjezd_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    67% {background: url("../obsah/ruc_nav/img/odjezd_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    75% {background: url("../obsah/ruc_nav/img/odjezd_3.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    92% {background: url("../obsah/ruc_nav/img/odjezd_3.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/odjezd.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes privolavacka{
+    0% {background: url("../obsah/ruc_nav/img/privolavacka.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    42% {background: url("../obsah/ruc_nav/img/privolavacka.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/privolavacka_noc.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    92% {background: url("../obsah/ruc_nav/img/privolavacka_noc.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/privolavacka.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes prevzeti{
+    0% {background: url("../obsah/ruc_nav/img/prevzeti_pokynu.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    42% {background: url("../obsah/ruc_nav/img/prevzeti_pokynu.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/prevzeti_pokynu_noc.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    92% {background: url("../obsah/ruc_nav/img/prevzeti_pokynu_noc.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/prevzeti_pokynu.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes konec{
+    0% {background: url("../obsah/nav_na_hv/img/konec_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/nav_na_hv/img/konec_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/nav_na_hv/img/konec_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/nav_na_hv/img/konec_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/nav_na_hv/img/konec_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes zvs{
+    0% {background: url("../obsah/nav_na_hv/img/zvs_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/nav_na_hv/img/zvs_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/nav_na_hv/img/zvs_0.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/nav_na_hv/img/zvs_0.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/nav_na_hv/img/zvs_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
