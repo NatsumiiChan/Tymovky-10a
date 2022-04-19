@@ -2,10 +2,10 @@
 <html lang="cs">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="stylesheet" href="../css/navesti.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" >
         <link rel="icon" href="../images/ikonka.png">
         <meta name="keywords" content="Návěsti na HV, HV, Hnací Vozidla">
         <meta name="description" content="Návěstidla">
@@ -19,6 +19,9 @@
 
         <!--Navigace a tlačítka v ní-->
         <div class="navigace">
+            <div class="material-icons zpatky" onclick="location.href='navesti.html';">
+                arrow_back
+            </div>
             <div class="tlacitko" onclick="location.href='zakladni_info.html';">
                 Základní informace
             </div>
@@ -31,6 +34,9 @@
             <div class="tlacitko" onclick="location.href='test.html';">
                 Test
             </div>
+            <div class="material-icons domu" onclick="location.href='../index.html';">
+                home
+            </div>
         </div>
 
         <!--Obsah-->
@@ -41,176 +47,299 @@
             <div class="pismenka za sebou">
                 Zde je přehled rychlostníků a pomalých jízd.
             </div>
-            <div class="tlacitko_zpusobove" onclick="zpusobove_okno()">
-                Doplňující informace
+
+            <!--Vybírač-->
+            <div class="kontejner_vyberovy">
+                <div class="vybirac">
+                    <span class="material-icons krizek" onclick="vybirac('ns')" id="ns_vybirac">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Rychlostníky NS
+                    </span>
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek" onclick="vybirac('n')" id="n_vybirac">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Rychlostníky N
+                    </span>
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek" onclick="vybirac('r')" id="r_vybirac">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Rychlostníky R
+                    </span>
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek" onclick="vybirac('prechod')" id="prechod_vybirac">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Rychlostníky 3. přechodové skupiny
+                    </span>
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek" onclick="vybirac('indikator')" id="indikator_vybirac">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Indikátory
+                    </span>
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek" onclick="vybirac('pj')" id="pj_vybirac">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Pomalé jízdy
+                    </span>
+                </div>
             </div>
-            <div class="karticky_ve_flexu">
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/navesti/n.png" alt="Rychlostník N" class="fotecka_v_karticce">
-                    <div class="carka">
+
+            <!--Obsah obsahu-->
+            <div class="kontejner_dolu" id="ns">
+                <div class="nadpis_mensi">
+                    Rychlostníky NS
+                </div>
+                <div class="karticky_ve_flexu">
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/navesti/ns.png" alt="Rychlostník NS" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Rychlostník NS
+                        </div>
                     </div>
-                    <div class="text_odkazovy">
-                        Rychlostník N
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/predvesti/ns.png" alt="Předvěst rychlostníku NS" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Předvěst rychlostníku NS
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/predvesti/konec.png" alt="Předvěst konce rychlostníku NS" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Předvěst konce rychlostníku NS
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/navesti/konec.png" alt="Konec rychlostníku NS" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Konec rychlostníku NS
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/navesti/lokomotiva.png" alt="Tabulka s lokomotivou" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Tabulka s lokomotivou
+                        </div>
                     </div>
                 </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/navesti/ns.png" alt="Rychlostník NS" class="fotecka_v_karticce">
-                    <div class="carka">
+            </div>
+            <div class="kontejner_dolu" id="n">
+                <div class="nadpis_mensi">
+                    Rychlostníky N
+                </div>
+                <div class="karticky_ve_flexu">
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/navesti/n.png" alt="Rychlostník N" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Rychlostník N
+                        </div>
                     </div>
-                    <div class="text_odkazovy">
-                        Rychlostník NS
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/navesti/dva_n.png" alt="Dva rychlostníky N nad sebou" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Dva rychlostníky N nad sebou
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/navesti/dva_n_s_carkou.png" alt="Dva rychlostníky N se svislými černými pruhy" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Dva rychlostníky N se svislými černými pruhy
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/predvesti/n.png" alt="Předvěst rychlostníku N" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Předvěst rychlostníku N
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/predvesti/dva_n.png" alt="Předvěst dvou rychlostníků N" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Předvěst dvou rychlostníků N
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/navesti/lokomotiva.png" alt="Tabulka s lokomotivou" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Tabulka s lokomotivou
+                        </div>
                     </div>
                 </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/navesti/r3.png" alt="Rychlostník 3. přechodové skupiny" class="fotecka_v_karticce">
-                    <div class="carka">
+            </div>
+            <div class="kontejner_dolu" id="prechod">
+                <div class="nadpis_mensi">
+                    Rychlostníky 3. přechodové skupiny
+                </div>
+                <div class="karticky_ve_flexu">
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/navesti/r3.png" alt="Rychlostník 3. přechodové skupiny" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Rychlostník 3. přechodové skupiny
+                        </div>
                     </div>
-                    <div class="text_odkazovy">
-                        Rychlostník 3. přechodové skupiny
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/predvesti/r3.png" alt="Předvěst rychlostníku 3. přechodové skupiny" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Předvěst rychlostníku 3. přechodové skupiny
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/navesti/lokomotiva.png" alt="Tabulka s lokomotivou" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Tabulka s lokomotivou
+                        </div>
                     </div>
                 </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/navesti/r.png" alt="Rychlostník R" class="fotecka_v_karticce">
-                    <div class="carka">
+            </div>
+            <div class="kontejner_dolu" id="r">
+                <div class="nadpis_mensi">
+                    Rychlostníky R
+                </div>
+                <div class="karticky_ve_flexu">
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/navesti/r.png" alt="Rychlostník R" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Rychlostník R
+                        </div>
                     </div>
-                    <div class="text_odkazovy">
-                        Rychlostník R
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/predvesti/r.png" alt="Předvěst rychlostníku R" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Předvěst rychlostníku R
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/navesti/lokomotiva.png" alt="Tabulka s lokomotivou" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Tabulka s lokomotivou
+                        </div>
                     </div>
                 </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/navesti/dva_n.png" alt="Dva rychlostníky N nad sebou" class="fotecka_v_karticce">
-                    <div class="carka">
+            </div>
+            <div class="kontejner_dolu" id="indikator">
+                <div class="nadpis_mensi">
+                    Indikátory
+                </div>
+                <div class="karticky_ve_flexu">
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/navesti/indikator.png" alt="Indikátor" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Indikátor
+                        </div>
                     </div>
-                    <div class="text_odkazovy">
-                        Dva rychlostníky N nad sebou
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/predvesti/indikator.png" alt="Předvěst indikátoru" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Předvěst indikátoru
+                        </div>
                     </div>
                 </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/navesti/dva_n_s_carkou.png" alt="Dva rychlostníky N se svislými černými pruhy" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Dva rychlostníky N se svislými černými pruhy
-                    </div>
+            </div>
+            <div class="kontejner_dolu" id="pj">
+                <div class="nadpis_mensi">
+                    Pomalé jízdy
                 </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/navesti/indikator.png" alt="Indikátor" class="fotecka_v_karticce">
-                    <div class="carka">
+                <div class="karticky_ve_flexu">
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/pj/t.png" alt="Tabulka s T" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Tabulka s T
+                        </div>
                     </div>
-                    <div class="text_odkazovy">
-                        Indikátor
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/pj/zacatek.png" alt="Začátek PJ" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Začátek PJ
+                        </div>
                     </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/predvesti/n.png" alt="Předvěst rychlostníku N" class="fotecka_v_karticce">
-                    <div class="carka">
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/pj/nepred.png" alt="Začátek nepředvěstěné PJ" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Začátek nepředvěstěné PJ
+                        </div>
                     </div>
-                    <div class="text_odkazovy">
-                        Předvěst rychlostníku N
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/pj/konec.png" alt="Konec PJ" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Konec PJ
+                        </div>
                     </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/predvesti/ns.png" alt="Předvěst rychlostníku NS" class="fotecka_v_karticce">
-                    <div class="carka">
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/pj/predvest.png" alt="Předvěst PJ" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Předvěst PJ
+                        </div>
                     </div>
-                    <div class="text_odkazovy">
-                        Předvěst rychlostníku NS
-                    </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/predvesti/r3.png" alt="Předvěst rychlostníku 3. přechodové skupiny" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Předvěst rychlostníku 3. přechodové skupiny
-                    </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/predvesti/r.png" alt="Předvěst rychlostníku R" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Předvěst rychlostníku R
-                    </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/predvesti/dva_n.png" alt="Předvěst dvou rychlostníků N" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Předvěst dvou rychlostníků N
-                    </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/predvesti/indikator.png" alt="Předvěst indikátoru" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Předvěst indikátoru
-                    </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/predvesti/konec.png" alt="Předvěst konce rychlostníku NS" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Předvěst konce rychlostníku NS
-                    </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/navesti/konec.png" alt="Konec rychlostníku NS" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Konec rychlostníku NS
-                    </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/navesti/lokomotiva.png" alt="Tabulka s lokomotivou" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Tabulka s lokomotivou
-                    </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/pj/t.png" alt="Tabulka s T" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Tabulka s T
-                    </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/pj/zacatek.png" alt="Začátek PJ" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Začátek PJ
-                    </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/pj/nepred.png" alt="Začátek nepředvěstěné PJ" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Začátek nepředvěstěné PJ
-                    </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/pj/konec.png" alt="Konec PJ" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Konec PJ
-                    </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/rychlostnik/img/pj/predvest.png" alt="Předvěst PJ" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Předvěst PJ
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/rychlostnik/img/navesti/lokomotiva.png" alt="Tabulka s lokomotivou" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Tabulka s lokomotivou
+                        </div>
                     </div>
                 </div>
             </div>
@@ -266,6 +395,7 @@
         <!--Link na script-->
         <script src="../script/start2.js"></script>
         <script src="../script/modal.js"></script>
+        <script src="../script/vybirac.js"></script>
 
         <!--By Marana_CZE-->
     </body>

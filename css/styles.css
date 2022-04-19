@@ -1,13 +1,11 @@
 /*Samotné tělo*/
 
-html{
-    overflow: overlay;
-}
-
 body{
     font-family: "Source Sans Pro", sans-serif;
     margin: 0;
     background-color: #ddd;
+    overflow: overlay;
+    width: 100vw;
 }
 
 /*Scrollbar*/
@@ -15,12 +13,12 @@ body{
 ::-webkit-scrollbar {
     width: 6px;
 }
-   
+
 ::-webkit-scrollbar-thumb {
     background: #333;
     border-radius: 3px;
 }
-  
+
 ::-webkit-scrollbar-thumb:hover {
     background: #111;
 }
@@ -72,6 +70,26 @@ body{
     box-shadow: 3px 3px 5px 1px #222;
 }
 
+.domu, .zpatky{
+    position: absolute;
+    color: #fff;
+    font-size: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.domu{
+    right: 30px;
+}
+
+.domu:hover, .zpatky:hover{
+    color: #bbb;
+}
+
+.zpatky{
+    left: 30px;
+}
+
 .tlacitko_aktualni, .tlacitko:hover{
     color: #fff;
     border-color: #fff;
@@ -116,18 +134,18 @@ body{
 /*Různé čárky na stránce*/
 
 .carka_vodorovna, .carka_svisla, .carka_svisla_velka{
-    border-style: solid;
-    border-color: #333;
-    border-width: 2px;
+    background-color: #333;
     border-radius: 2px;
 }
 
 .carka_vodorovna{
     width: 90%;
+    height: 4px;
 }
 
 .carka_svisla{
     height: 2rem;
+    width: 4px;
 }
 
 /*Různé texty na stránce*/
@@ -289,9 +307,6 @@ body{
     gap: 20px; 
     background-color: #fff;
     box-shadow: 3px 3px 5px 1px #222;
-    border-style: solid;
-    border-color: #222;
-    border-width: 2px;
     border-radius: 8px;
     padding: 10px;
     max-width: 400px;
@@ -307,10 +322,9 @@ body{
 .carka{
     width: 300px;
     margin: -25px -15px -10px -10px;
-    border-style: solid;
     border-radius: 2px;
-    border-color: #222;
-    border-width: 2px;
+    background-color: #222;
+    height: 4px;
 }
 
 .text_odkazovy{
@@ -331,6 +345,10 @@ body{
     text-shadow: 5px 5px 10px #222;
 }
 
+.karticka:hover{
+    box-shadow: 4px 4px 7px 2px #222;
+}
+
 .karticka:hover .carka{
     width: 350px;
 }
@@ -349,9 +367,51 @@ body{
     background-color: #ddd;
 }
 
+/*Vybírač*/
+
+.kontejner_vyberovy, .vybirac{
+    display: flex;
+}
+
+.kontejner_vyberovy{
+    padding: 15px;
+    background-color: #aaa;
+    box-shadow: 3px 3px 5px 1px #222;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.vybirac{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 5px;
+    align-items: center;
+}
+
+.vybiraci_text, .krizek{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+.krizek{
+    user-select: none;
+    background-color: #777;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px;
+}
+
+.krizek_neaktivni{
+    color: #777;
+    border-color: #000;
+}
+
 /*Animace*/
 
-.tlacitko_zpusobove:hover, .tlacitko_zpusobove, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko, .email, .email:hover, .text_odkazovy, .text_odkazovy:hover, .carka, .carka:hover{
+.tlacitko_zpusobove:hover, .tlacitko_zpusobove, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko, .email, .email:hover, .text_odkazovy, .text_odkazovy:hover, .carka, .carka:hover, .karticka, .karticka:hover, .domu, .domu:hover, .zpatky, .zpatky:hover{
     transition: 0.2s;
 }
 
