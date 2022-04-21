@@ -50,6 +50,7 @@ body{
     left: 0;
     background-color: #333;
     box-shadow: 0px 2px 3px 1px #000;
+    z-index: 2;
 }
 
 .tlacitko, .tlacitko_aktualni{
@@ -229,7 +230,7 @@ body{
 }
 
 .zavirac{
-    z-index: 1;
+    z-index: 10;
     user-select: none;
 }
 
@@ -249,6 +250,7 @@ body{
 
 .okno_zpusobove{
     background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9;
 }
 
 .kontejner_zpusobovy_dolu{
@@ -258,7 +260,7 @@ body{
 
 .kontejner_zpusobovy{
     background-color: #fff;
-    z-index: 10;
+    z-index: 11;
     padding: 20px;
     border-style: solid;
     border-width: 2px;
@@ -369,17 +371,55 @@ body{
 
 /*Vybírač*/
 
+.nastaveni{
+    color: #000;
+    font-size: 2.5rem;
+    cursor: pointer;
+    user-select: none;
+    margin-top: 55px;
+}
+
+.nastaveni:hover, .nastaveni_true{
+    color: #333;
+}
+
+.nositel{
+    position: absolute;
+    left: 30px;
+    z-index: 1;
+}
+
 .kontejner_vyberovy, .vybirac{
     display: flex;
 }
 
 .kontejner_vyberovy{
+    margin-top: calc( -2.5rem - 5px);
+    margin-left: calc(30px + 2.5rem);
     padding: 15px;
-    background-color: #aaa;
-    box-shadow: 3px 3px 5px 1px #222;
+    border-radius: 8px;
+    background-color: #333;
+    box-shadow: 3px 3px 5px 1px #000;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 8px;
+    margin-right: 30px;
+    animation: kontejner_vyberovy-animace-otevreni 0.5s;
+    max-width: 400px;
+}
+
+.kontejner_vyberovy::after{
+    background-color: #333;
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    content: '';
+    margin-left: calc((-15px - 1rem) + 0.5rem);
+    transform: rotate(135deg);
+}
+
+.kontejner_vyberovy_zaviraci{
+    animation: kontejner_vyberovy-animace-zavreni 0.5s;
 }
 
 .vybirac{
@@ -389,6 +429,10 @@ body{
     align-items: center;
 }
 
+.vybiraci_text{
+    color: #fff;
+}
+
 .vybiraci_text, .krizek{
     font-size: 1.5rem;
     line-height: 1.5rem;
@@ -396,22 +440,23 @@ body{
 
 .krizek{
     user-select: none;
-    background-color: #777;
+    background-color: #000;
     width: 1.5rem;
     height: 1.5rem;
     border-style: solid;
     border-width: 2px;
     border-radius: 4px;
+    border-color: #fff;
+    color: #fff;
 }
 
 .krizek_neaktivni{
-    color: #777;
-    border-color: #000;
+    color: #000;
 }
 
 /*Animace*/
 
-.tlacitko_zpusobove:hover, .tlacitko_zpusobove, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko, .email, .email:hover, .text_odkazovy, .text_odkazovy:hover, .carka, .carka:hover, .karticka, .karticka:hover, .domu, .domu:hover, .zpatky, .zpatky:hover{
+.tlacitko_zpusobove:hover, .tlacitko_zpusobove, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko, .email, .email:hover, .text_odkazovy, .text_odkazovy:hover, .carka, .carka:hover, .karticka, .karticka:hover, .domu, .domu:hover, .zpatky, .zpatky:hover, .nastaveni, .nastaveni:hover, .krizek, .krizek_neaktivni, .nastaveni_true{
     transition: 0.2s;
 }
 
@@ -425,4 +470,25 @@ body{
 @keyframes okno_zpusobove-animace-zavreni{
     0% {opacity:100;}
     100% {opacity:0;}
+}
+
+@keyframes kontejner_vyberovy-animace-otevreni{
+    0% {width: 0px; height: 0px;}
+    100% {width: 100%; height: 100%;}
+}
+
+@keyframes kontejner_vyberovy-animace-zavreni{
+    0% {width: 100%; height: 100%;}
+    100% {width: 0px;  height: 0px;}
+}
+
+/*
+@keyframes kontejner_vyberovy-animace-otevreni{
+    0% {transform: translate(-200%, 0);}
+    100% {transform: translate(0%, 0);}
+}
+
+@keyframes kontejner_vyberovy-animace-zavreni{
+    0% {transform: translate(0%, 0);}
+    100% {transform: translate(-200%, 0);}
 }

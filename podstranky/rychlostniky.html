@@ -39,17 +39,12 @@
             </div>
         </div>
 
-        <!--Obsah-->
-        <div class="kontejner_dolu">
-            <div class="nadpis">
-                Rychlostníky
+        <!--Vybírač-->
+        <div class="nositel">
+            <div class="material-icons nastaveni" id="nastavovani" onclick="vysunSe()">
+            settings
             </div>
-            <div class="pismenka za sebou">
-                Zde je přehled rychlostníků a pomalých jízd.
-            </div>
-
-            <!--Vybírač-->
-            <div class="kontejner_vyberovy">
+            <div class="nic" id="interier_popupu">
                 <div class="vybirac">
                     <span class="material-icons krizek" onclick="vybirac('ns')" id="ns_vybirac">
                         clear
@@ -99,7 +94,19 @@
                     </span>
                 </div>
             </div>
+        </div>
 
+        <!--Obsah-->
+        <div class="kontejner_dolu">
+            <div class="nadpis">
+                Rychlostníky
+            </div>
+            <div class="pismenka za sebou">
+                Zde je přehled rychlostníků a pomalých jízd.
+            </div>
+            <div class="tlacitko_zpusobove" onclick="zpusobove_okno()">
+                Dělení kategorií
+            </div>
             <!--Obsah obsahu-->
             <div class="kontejner_dolu" id="ns">
                 <div class="nadpis_mensi">
@@ -395,6 +402,7 @@
         <!--Link na script-->
         <script src="../script/start2.js"></script>
         <script src="../script/modal.js"></script>
+        <script src="../script/popup.js"></script>
         <script src="../script/vybirac.js"></script>
 
         <!--By Marana_CZE-->

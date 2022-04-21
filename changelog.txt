@@ -49,3 +49,8 @@ U podstránek -> návěstí - přidáno tlačítko zpět na návěsti
 Upraven systém dělení v rychlostnících
 Dodělána funkce Vybírač, která nám skryje nepožadované položky
 Částečně zaimplementována fce vybírač
+
+v0.70 (21.04) (Marek)
+Fce vybírač vložena do popupu
+Upráva popupu
+Úprava potřebných věcí
