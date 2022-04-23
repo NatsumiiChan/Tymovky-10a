@@ -10,20 +10,20 @@ Výměna a úprava obrázků.
 Vytvoření další webové stránky o základních informacích a potřebných věcí pro ní.
 Doplnění informací.
 
-v0.3 (14.04) (Marek)
+v0.23 (14.04) (Marek)
 Úprava šablony
 Vytvoření modálního okna
 Úprava style.css pro menší velikost
 Doplnění animací
 Dolnění nové stránky
 
-v0.4 (15.04) (Marek)
+v0.3 (15.04) (Marek)
 Úprava modálu pro správné fungování při změnšení velikosti
 Doplnění kartiček
 Přidána funkce pro email
 Přidány animace pro modál
 
-v0.5 (15.04) (Marek)
+v0.4 (15.04) (Marek)
 Upraven modál
 Upraveno tělo, aby při otevření modalu nešlo scrollovat
 Modál v samostatném JS souboru
@@ -33,14 +33,14 @@ Upraven čas animací
 Upravena velikost scrollbaru
 Upravena animace ZVS
 
-v0.6 (16.04) (Marek)
+v0.5 (16.04) (Marek)
 Přetvořeny kartičky
 Přidány další stránky
 Upraven scrollbar
 Návěsti v souboru styles.css přesunuty do souboru navesti.css
 Přidány další animace
 
-v0.69 (19.04) (Marek)
+v0.6 (19.04) (Marek)
 Opraven Modál u menších obrazovek
 Opraveny čáry a nahrazeny
 Upraven, opraven scrollbar a jeho součásti
@@ -50,7 +50,15 @@ Upraven systém dělení v rychlostnících
 Dodělána funkce Vybírač, která nám skryje nepožadované položky
 Částečně zaimplementována fce vybírač
 
-v0.70 (21.04) (Marek)
+v0.666 (21.04) (Marek)
 Fce vybírač vložena do popupu
 Upráva popupu
 Úprava potřebných věcí
+
+v0.69 (23.04) (Marek)
+Upravena animace pro PopUp
+Opraveny chyby v textech
+Upravena navigace, kvůli možnosti překrytí tlačítek spolu s tlačítky "domů" a "zpět"
+Přidán "zavírač" pro PopUp pro odstranění potřeby znovu mačkat tlačítko nastavení pro zavření PopUpu. Nově stačí kliknout na stránce
+Nalezen problém s rozmázáváním záhlavní fotky, který jsem vyřešil vložením <div> přes stránku
+PopUp + fce vybíráč implementována na další stránky
