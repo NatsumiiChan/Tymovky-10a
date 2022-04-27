@@ -60,5 +60,17 @@ Upravena animace pro PopUp
 Opraveny chyby v textech
 Upravena navigace, kvůli možnosti překrytí tlačítek spolu s tlačítky "domů" a "zpět"
 Přidán "zavírač" pro PopUp pro odstranění potřeby znovu mačkat tlačítko nastavení pro zavření PopUpu. Nově stačí kliknout na stránce
-Nalezen problém s rozmázáváním záhlavní fotky, který jsem vyřešil vložením <div> přes stránku
+Nalezený problém s rozmázáváním záhlavní fotky, jsem vyřešil vložením <div> přes stránku
 PopUp + fce vybíráč implementována na další stránky
+
+v0.70 (27.04) (Marek)
+Implementace fce vybírač do návěstí na vozidlech
+Přidány další návěsti mezi návěsti na vozidlech
+Úprava fotek v návěstí na vozidlech
+Přidání fotek pro návěsti na vozidlech
+Doplněny všechny fotky a animace pro ruční návěsti
+Rozdělení návěsti na vozidlech
+Důležité návěsti jsou nově oranžové barvy
+Opravy drobných chyb
+Doplnění všech rychlostníků fotkami
+Doplněny "doplňující informace" k rychlostníkům

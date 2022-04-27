@@ -1,9 +1,50 @@
 /*Animace Návěstí*/
 
-.zvs, .konec, .privolavacka, .prevzeti, .odjezd, .zvs_rucni, .stuj, .vystraha{
+.zvs, .konec, .privolavacka, .prevzeti, .odjezd, .zvs_rucni, .stuj, .vystraha, .obsazeno, .cely, .prestaveno, .zabrzdit, .brzda_ok, .odbrzdit, .souhlas, .odraz, .stuj_posun, .pomalu, .popotahnout, .stlacit, .priblizit, .vzdalit{
     width: 400px;
     height: 400px;
 }
+
+.souhlas{
+    animation: souhlas 5s;
+    animation-iteration-count: infinite;
+}
+
+.odraz{
+    animation: odraz 5s;
+    animation-iteration-count: infinite;
+}
+
+.stuj_posun{
+    animation: stuj_posun 5s;
+    animation-iteration-count: infinite;
+}
+
+.pomalu{
+    animation: pomalu 5s;
+    animation-iteration-count: infinite;
+}
+
+.popotahnout{
+    animation: popotahnout 5s;
+    animation-iteration-count: infinite;
+}
+
+.stlacit{
+    animation: stlacit 5s;
+    animation-iteration-count: infinite;
+}
+
+.priblizit{
+    animation: priblizit 5s;
+    animation-iteration-count: infinite;
+}
+
+.vzdalit{
+    animation: vzdalit 5s;
+    animation-iteration-count: infinite;
+}
+
 .zvs{
     animation: zvs 2s;
     animation-iteration-count: infinite;
@@ -44,6 +85,35 @@
     animation-iteration-count: infinite;
 }
 
+.obsazeno{
+    animation: obsazeno 5s;
+    animation-iteration-count: infinite;
+}
+
+.cely{
+    animation: cely 5s;
+    animation-iteration-count: infinite;
+}
+
+.prestaveno{
+    animation: prestaveno 5s;
+    animation-iteration-count: infinite;
+}
+
+.odbrzdit{
+    animation: odbrzdit 5s;
+    animation-iteration-count: infinite;
+}
+
+.zabrzdit{
+    animation: zabrzdit 5s;
+    animation-iteration-count: infinite;
+}
+
+.brzda_ok{
+    animation: brzda_ok 5s;
+    animation-iteration-count: infinite;
+}
 
 /*Keyframes animací*/
 
@@ -117,4 +187,116 @@
     50% {background: url("../obsah/nav_na_hv/img/zvs_0.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
     85% {background: url("../obsah/nav_na_hv/img/zvs_0.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
     100% {background: url("../obsah/nav_na_hv/img/zvs_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes obsazeno{
+    0% {background: url("../obsah/nav_na_hv/img/obsazeno_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/nav_na_hv/img/obsazeno_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/nav_na_hv/img/obsazeno_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/nav_na_hv/img/obsazeno_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/nav_na_hv/img/obsazeno_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes cely{
+    0% {background: url("../obsah/ruc_nav/img/cely_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/ruc_nav/img/cely_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/cely_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/ruc_nav/img/cely_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/cely_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes prestaveno{
+    0% {background: url("../obsah/ruc_nav/img/prestaveno_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/ruc_nav/img/prestaveno_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/prestaveno_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/ruc_nav/img/prestaveno_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/prestaveno_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes brzda_ok{
+    0% {background: url("../obsah/ruc_nav/img/brzda_ok_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/ruc_nav/img/brzda_ok_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/brzda_ok_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/ruc_nav/img/brzda_ok_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/brzda_ok_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes odbrzdit{
+    0% {background: url("../obsah/ruc_nav/img/odbrzdit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/ruc_nav/img/odbrzdit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/odbrzdit_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/ruc_nav/img/odbrzdit_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/odbrzdit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes zabrzdit{
+    0% {background: url("../obsah/ruc_nav/img/zabrzdit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/ruc_nav/img/zabrzdit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/zabrzdit_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/ruc_nav/img/zabrzdit_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/zabrzdit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes souhlas{
+    0% {background: url("../obsah/ruc_nav/img/souhlas_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/ruc_nav/img/souhlas_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/souhlas_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/ruc_nav/img/souhlas_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/souhlas_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes odraz{
+    0% {background: url("../obsah/ruc_nav/img/odraz_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/ruc_nav/img/odraz_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/odraz_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/ruc_nav/img/odraz_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/odraz_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes stuj_posun{
+    0% {background: url("../obsah/ruc_nav/img/stuj_posun_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/ruc_nav/img/stuj_posun_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/stuj_posun_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/ruc_nav/img/stuj_posun_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/stuj_posun_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes pomalu{
+    0% {background: url("../obsah/ruc_nav/img/pomalu_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/ruc_nav/img/pomalu_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/pomalu_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/ruc_nav/img/pomalu_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/pomalu_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes popotahnout{
+    0% {background: url("../obsah/ruc_nav/img/popotahnout_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/ruc_nav/img/popotahnout_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/popotahnout_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/ruc_nav/img/popotahnout_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/popotahnout_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes stlacit{
+    0% {background: url("../obsah/ruc_nav/img/stlacit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/ruc_nav/img/stlacit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/stlacit_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/ruc_nav/img/stlacit_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/stlacit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes priblizit{
+    0% {background: url("../obsah/ruc_nav/img/priblizit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/ruc_nav/img/priblizit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/priblizit_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/ruc_nav/img/priblizit_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/priblizit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+}
+
+@keyframes vzdalit{
+    0% {background: url("../obsah/ruc_nav/img/vzdalit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    35% {background: url("../obsah/ruc_nav/img/vzdalit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    50% {background: url("../obsah/ruc_nav/img/vzdalit_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    85% {background: url("../obsah/ruc_nav/img/vzdalit_2.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
+    100% {background: url("../obsah/ruc_nav/img/vzdalit_1.png"); background-size: cover; background-repeat: no-repeat; background-position: center;}
 }

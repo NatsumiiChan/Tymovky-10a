@@ -231,8 +231,8 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
     width: 100vw;
+    height: 100vh;
     overflow-y: scroll;
     animation:  okno_zpusobove-animace-otevreni 0.5s;
 }
@@ -243,7 +243,6 @@ body{
 
 .zavirac{
     z-index: 10;
-    user-select: none;
 }
 
 .okno_zpusobove, .kontejner_zpusobovy_dolu, .okno_zpusobove_true{
@@ -312,14 +311,13 @@ body{
     gap: 50px;
 }
 
-.karticka{
+.karticka, .karticka_dulezita{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     gap: 20px; 
-    background-color: #fff;
     box-shadow: 3px 3px 5px 1px #222;
     border-radius: 8px;
     padding: 10px;
@@ -329,9 +327,17 @@ body{
     z-index: 2;
 }
 
+.karticka{
+    background-color: #fff;
+}
+
+.karticka_dulezita{
+    background-color: #fc0;
+}
+
 .fotecka_v_karticce{
     margin: -10px -15px 10px -10px;
-    max-width: 400px;
+    width: 400px;
 }
 
 .carka{
@@ -354,17 +360,18 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: -1px;
+    user-select: none;
 }
 
-.karticka:hover .text_odkazovy{
+.karticka:hover .text_odkazovy, .karticka_dulezita:hover .text_odkazovy{
     text-shadow: 5px 5px 10px #222;
 }
 
-.karticka:hover{
+.karticka:hover, .karticka_dulezita:hover{
     box-shadow: 4px 4px 7px 2px #222;
 }
 
-.karticka:hover .carka{
+.karticka:hover .carka, .karticka_dulezita:hover .carka{
     width: 350px;
 }
 
@@ -478,7 +485,7 @@ body{
 
 /*Animace*/
 
-.tlacitko_zpusobove:hover, .tlacitko_zpusobove, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko, .email, .email:hover, .text_odkazovy, .text_odkazovy:hover, .carka, .carka:hover, .karticka, .karticka:hover, .domu, .domu:hover, .zpatky, .zpatky:hover, .nastaveni, .nastaveni:hover, .krizek, .krizek_neaktivni, .nastaveni_true{
+.tlacitko_zpusobove:hover, .tlacitko_zpusobove, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko, .email, .email:hover, .text_odkazovy, .text_odkazovy:hover, .carka, .carka:hover, .karticka, .karticka:hover, .domu, .domu:hover, .zpatky, .zpatky:hover, .nastaveni, .nastaveni:hover, .krizek, .krizek_neaktivni, .nastaveni_true, .karticka_dulezita, .karticka_dulezita:hover{
     transition: 0.2s;
 }
 

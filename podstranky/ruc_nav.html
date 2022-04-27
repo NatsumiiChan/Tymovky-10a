@@ -54,6 +54,14 @@
             </div>
             <div class="nic" id="interier_popupu">
                 <div class="vybirac">
+                    <span class="material-icons krizek" onclick="vybirac('special')" id="special_vybirac">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Ruční speciální návěsti
+                    </span>
+                </div>
+                <div class="vybirac">
                     <span class="material-icons krizek" onclick="vybirac('vlak')" id="vlak_vybirac">
                         clear
                     </span>
@@ -90,6 +98,22 @@
             </div>
             <div class="tlacitko_zpusobove" onclick="zpusobove_okno()">
                 Doplňující informace
+            </div>
+            <div class="kontejner_dolu" id="special">
+                <div class="nadpis_mensi">
+                    Ruční speciální návěsti
+                </div>
+                <div class="karticky_ve_flexu">
+                    <div class="karticka_dulezita" onclick="">
+                        <div alt="ZVS" class="fotecka_v_karticce zvs_rucni">
+                        </div>
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Stůj, zastavte všemi prostředky.
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="kontejner_dolu" id="vlak">
                 <div class="nadpis_mensi">
@@ -166,16 +190,8 @@
                         </div>
                     </div>
                     <div class="karticka" onclick="">
-                        <div alt="ZVS" class="fotecka_v_karticce zvs_rucni">
+                        <div alt="Vlak vjel celý" class="fotecka_v_karticce cely">
                         </div>
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Stůj, zastavte všemi prostředky.
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/ruc_nav/img/....png" alt="Nekraťte pravidelnou jízdní dobu" class="fotecka_v_karticce">
                         <div class="carka">
                         </div>
                         <div class="text_odkazovy">
@@ -183,11 +199,20 @@
                         </div>
                     </div>
                     <div class="karticka" onclick="">
-                        <img src="../obsah/ruc_nav/img/....png" alt="Nekraťte pravidelnou jízdní dobu" class="fotecka_v_karticce">
+                        <div alt="Výměny jsou přestavěny" class="fotecka_v_karticce prestaveno">
+                        </div>
                         <div class="carka">
                         </div>
                         <div class="text_odkazovy">
                             Výměny jsou přestavěny
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/ruc_nav/img/zmena.png" alt="Změna trasy" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Změna trasy
                         </div>
                     </div>
                 </div>
@@ -198,7 +223,8 @@
                 </div>
                 <div class="karticky_ve_flexu">
                     <div class="karticka" onclick="">
-                        <img src="../obsah/ruc_nav/img/nekratte.png" alt="Nekraťte pravidelnou jízdní dobu" class="fotecka_v_karticce">
+                        <div alt="Vzdálit" class="fotecka_v_karticce vzdalit">
+                        </div>
                         <div class="carka">
                         </div>
                         <div class="text_odkazovy">
@@ -206,7 +232,8 @@
                         </div>
                     </div>
                     <div class="karticka" onclick="">
-                        <img src="../obsah/ruc_nav/img/nekratte.png" alt="Nekraťte pravidelnou jízdní dobu" class="fotecka_v_karticce">
+                        <div alt="Přiblížit" class="fotecka_v_karticce priblizit">
+                        </div>
                         <div class="carka">
                         </div>
                         <div class="text_odkazovy">
@@ -214,7 +241,8 @@
                         </div>
                     </div>
                     <div class="karticka" onclick="">
-                        <img src="../obsah/ruc_nav/img/nekratte.png" alt="Nekraťte pravidelnou jízdní dobu" class="fotecka_v_karticce">
+                        <div alt="Stlačit" class="fotecka_v_karticce stlacit">
+                        </div>
                         <div class="carka">
                         </div>
                         <div class="text_odkazovy">
@@ -222,7 +250,8 @@
                         </div>
                     </div>
                     <div class="karticka" onclick="">
-                        <img src="../obsah/ruc_nav/img/nekratte.png" alt="Nekraťte pravidelnou jízdní dobu" class="fotecka_v_karticce">
+                        <div alt="Popotáhnout" class="fotecka_v_karticce popotahnout">
+                        </div>
                         <div class="carka">
                         </div>
                         <div class="text_odkazovy">
@@ -230,7 +259,8 @@
                         </div>
                     </div>
                     <div class="karticka" onclick="">
-                        <img src="../obsah/ruc_nav/img/nekratte.png" alt="Nekraťte pravidelnou jízdní dobu" class="fotecka_v_karticce">
+                        <div alt="Pomalu" class="fotecka_v_karticce pomalu">
+                        </div>
                         <div class="carka">
                         </div>
                         <div class="text_odkazovy">
@@ -238,7 +268,8 @@
                         </div>
                     </div>
                     <div class="karticka" onclick="">
-                        <img src="../obsah/ruc_nav/img/nekratte.png" alt="Nekraťte pravidelnou jízdní dobu" class="fotecka_v_karticce">
+                        <div alt="Stůj" class="fotecka_v_karticce stuj_posun">
+                        </div>
                         <div class="carka">
                         </div>
                         <div class="text_odkazovy">
@@ -246,7 +277,8 @@
                         </div>
                     </div>
                     <div class="karticka" onclick="">
-                        <img src="../obsah/ruc_nav/img/nekratte.png" alt="Nekraťte pravidelnou jízdní dobu" class="fotecka_v_karticce">
+                        <div alt="Odraz" class="fotecka_v_karticce odraz">
+                        </div>
                         <div class="carka">
                         </div>
                         <div class="text_odkazovy">
@@ -254,7 +286,8 @@
                         </div>
                     </div>
                     <div class="karticka" onclick="">
-                        <img src="../obsah/ruc_nav/img/nekratte.png" alt="Nekraťte pravidelnou jízdní dobu" class="fotecka_v_karticce">
+                        <div alt="Souhlas k posunu" class="fotecka_v_karticce souhlas">
+                        </div>
                         <div class="carka">
                         </div>
                         <div class="text_odkazovy">
@@ -262,7 +295,7 @@
                         </div>
                     </div>
                     <div class="karticka" onclick="">
-                        <img src="../obsah/ruc_nav/img/nekratte.png" alt="Nekraťte pravidelnou jízdní dobu" class="fotecka_v_karticce">
+                        <img src="../obsah/ruc_nav/img/nameznik.png" alt="Posun za námezník" class="fotecka_v_karticce">
                         <div class="carka">
                         </div>
                         <div class="text_odkazovy">
@@ -277,7 +310,8 @@
                 </div>
                 <div class="karticky_ve_flexu">
                     <div class="karticka" onclick="">
-                        <img src="../obsah/ruc_nav/img/nekratte.png" alt="Nekraťte pravidelnou jízdní dobu" class="fotecka_v_karticce">
+                        <div alt="Zabrzděte" class="fotecka_v_karticce zabrzdit">
+                        </div>
                         <div class="carka">
                         </div>
                         <div class="text_odkazovy">
@@ -285,7 +319,8 @@
                         </div>
                     </div>
                     <div class="karticka" onclick="">
-                        <img src="../obsah/ruc_nav/img/nekratte.png" alt="Nekraťte pravidelnou jízdní dobu" class="fotecka_v_karticce">
+                        <div alt="Odbrzděte" class="fotecka_v_karticce odbrzdit">
+                        </div>
                         <div class="carka">
                         </div>
                         <div class="text_odkazovy">
@@ -293,7 +328,8 @@
                         </div>
                     </div>
                     <div class="karticka" onclick="">
-                        <img src="../obsah/ruc_nav/img/nekratte.png" alt="Nekraťte pravidelnou jízdní dobu" class="fotecka_v_karticce">
+                        <div alt="Brzda v pořádku" class="fotecka_v_karticce brzda_ok">
+                        </div>
                         <div class="carka">
                         </div>
                         <div class="text_odkazovy">

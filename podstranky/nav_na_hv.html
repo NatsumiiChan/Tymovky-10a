@@ -45,6 +45,49 @@
             </div>
         </div>
 
+        <!--Vybírač-->
+        <div class="zavirac_popupu nic" id="zavirac_popupu" onclick="vysunSe()">
+        </div>
+        <div class="nositel">
+            <div class="material-icons nastaveni" id="nastavovani" onclick="vysunSe()">
+            settings
+            </div>
+            <div class="nic" id="interier_popupu">
+                <div class="vybirac">
+                    <span class="material-icons krizek" onclick="vybirac('special')" id="special_vybirac">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Návěsti specialního určení
+                    </span>
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek" onclick="vybirac('vlak')" id="vlak_vybirac">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Návěsti na vlaku
+                    </span>
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek" onclick="vybirac('posun')" id="posun_vybirac">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Návěsti na posunovacích dílech
+                    </span>
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek" onclick="vybirac('kryti')" id="kryti_vybirac">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Návěsti ke krytí vozidel
+                    </span>
+                </div>
+            </div>
+        </div> 
+
         <!--Obsah-->
         <div class="kontejner_dolu">
             <div class="nadpis">
@@ -56,55 +99,98 @@
             <div class="tlacitko_zpusobove" onclick="zpusobove_okno()">
                 Doplňující informace
             </div>
-            <div class="karticky_ve_flexu">
-                <div class="karticka" onclick="">
-                    <img src="../obsah/nav_na_hv/img/zacatek.png" alt="Začátek vlaku" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Začátek vlaku
+            <div class="kontejner_dolu" id="special">
+                <div class="nadpis_mensi">
+                    Návěsti specialního určení
+                </div>
+                <div class="karticky_ve_flexu">
+                    <div class="karticka_dulezita" onclick="">
+                        <div alt="ZVS" class="fotecka_v_karticce zvs">
+                        </div>
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Stůj, zastavte všemi prostředky.
+                        </div>
                     </div>
                 </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/nav_na_hv/img/zacatek_nedorozumi.png" alt="Začátek vlaku za nemožného dorozumění" class="fotecka_v_karticce">
-                    <div class="carka">
+            </div>
+            <div class="kontejner_dolu" id="vlak">
+                <div class="nadpis_mensi">
+                    Návěsti na vlaku
+                </div>
+                <div class="karticky_ve_flexu">
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/nav_na_hv/img/zacatek.png" alt="Začátek vlaku" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Začátek vlaku
+                        </div>
                     </div>
-                    <div class="text_odkazovy">
-                        Začátek vlaku za nemožného dorozumění
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/nav_na_hv/img/zacatek_nedorozumi.png" alt="Začátek vlaku za nemožného dorozumění" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Začátek vlaku za nemožného dorozumění
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <div alt="Konec vlaku" class="fotecka_v_karticce konec">
+                        </div>
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Konec vlaku
+                        </div>
                     </div>
                 </div>
-                <div class="karticka" onclick="">
-                    <div alt="Konec vlaku" class="fotecka_v_karticce konec">
-                    </div>
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Konec vlaku
+            </div>
+            <div class="kontejner_dolu" id="posun">
+                <div class="nadpis_mensi">
+                    Návěsti na posunovacích dílech
+                </div>
+                <div class="karticky_ve_flexu">
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/nav_na_hv/img/posun.png" alt="HV při posunu" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            HV při posunu
+                        </div>
                     </div>
                 </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/nav_na_hv/img/posun.png" alt="HV při posunu" class="fotecka_v_karticce">
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        HV při posunu
-                    </div>
+            </div>
+            <div class="kontejner_dolu" id="kryti">
+                <div class="nadpis_mensi">
+                    Návěsti ke krytí vozidel
                 </div>
-                <div class="karticka" onclick="">
-                    <img src="../obsah/nav_na_hv/img/obsazeno.png" alt="HV obsazeno" class="fotecka_v_karticce">
-                    <div class="carka">
+                <div class="karticky_ve_flexu">
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/nav_na_hv/img/obsazeno.png" alt="HV obsazeno" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            HV obsazeno
+                        </div>
                     </div>
-                    <div class="text_odkazovy">
-                        HV obsazeno
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/nav_na_hv/img/predtapeni.png" alt="Vozidlo připojeno k elektrickému předtápěcímu stojanu" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Vozidlo připojeno k elektrickému předtápěcímu stojanu
+                        </div>
                     </div>
-                </div>
-                <div class="karticka" onclick="">
-                    <div alt="ZVS" class="fotecka_v_karticce zvs">
-                    </div>
-                    <div class="carka">
-                    </div>
-                    <div class="text_odkazovy">
-                        Stůj, zastavte všemi prostředky.
+                    <div class="karticka" onclick="">
+                        <div  alt="Obsazeno osobami" class="fotecka_v_karticce obsazeno">
+                        </div>
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Obsazeno osobami
+                        </div>
                     </div>
                 </div>
             </div>
@@ -194,6 +280,8 @@
         <!--Link na script-->
         <script src="../script/start2.js"></script>
         <script src="../script/modal.js"></script>
+        <script src="../script/popup.js"></script>
+        <script src="../script/vybirac.js"></script>
 
         <!--By Marana_CZE-->
     </body>
