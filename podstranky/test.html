@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/navesti.css">
+        <link rel="icon" href="../images/ikonka.png">
+        <meta name="keywords" content="Návěsti na HV, HV, Hnací Vozidla">
+        <meta name="description" content="Návěstidla">
+        <title>Test</title>
+    </head>
+    <body id="body">
+        
+        <!--Pojistka proti rozmazávání záhlavní fotky-->
+        <div class="anti-rozmazani">
+        </div>
+
+        <!--Záhlavní obrázek-->
+        <div class = "zahlavi" onclick="location.href='../index.html';">
+        </div>
+
+        <!--Navigace a tlačítka v ní-->
+        <div class="navigace">
+            <div class="flex_pro_navigaci">
+                <div class="tlacitko" onclick="location.href='zakladni_info.html';">
+                    Základní informace
+                </div>
+                <div class="tlacitko" onclick="location.href='navesti.html';">
+                    Návěsti
+                </div>
+                <div class="tlacitko" onclick="location.href='hledac.html';">
+                    Hledání návěsti
+                </div>
+                <div class="tlacitko_aktualni" onclick="location.href='test.html';">
+                    Test
+                </div>
+            </div>
+            <div class="material-icons domu" onclick="location.href='../index.html';">
+                home
+            </div>
+        </div>
+
+        <!--Vybírač-->
+        <div class="zavirac_popupu nic" id="zavirac_popupu" onclick="vysunSe()">
+        </div>
+        <div class="nositel">
+            <div class="material-icons nastaveni" id="nastavovani" onclick="vysunSe()">
+            settings
+            </div>
+            <div class="nic" id="interier_popupu">
+                <div class="nadpis_popup">
+                    Funkce
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Vysvětlení návěsti
+                    </span>
+                </div>
+                <div class="nadpis_popup">
+                    Obsah
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek" onclick="">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Rychlostníky
+                    </span>
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Hlavní Návěstidla
+                    </span>
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Slyšitelné návěsti
+                    </span>
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Ruční návěsti
+                    </span>
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Návěsti na vozidlech
+                    </span>
+                </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Ostatní návěsti
+                    </span>
+                </div>
+            </div>
+        </div> 
+
+        <!--Obsah-->
+        <div class="kontejner_dolu">
+            <div class="oddelovac">
+            </div>
+            <div class="nadpis">
+                Test na návěsti
+            </div>
+            <div class="test_kontejner">
+                <div class="img_test" id="img_na_testu">
+                    <div alt="Stůj, zastavte všemi prostředky." class="fotecka_na_testu zvs">
+                    </div>
+                </div>
+                <div class="odpovedi">
+                    <div class="odpoved odpoved_vybirani" id="odpoved_1">
+                        <div class="oznaceni_odpovedi">
+                            A
+                        </div>
+                        <div class="text_odpovedi">
+                            Odpověď A (Tato odpověď je teprve vybírána)
+                        </div>
+                    </div>
+                    <div class="carka_test">
+                    </div>
+                    <div class="odpoved odpoved_true" id="odpoved_2">
+                        <div class="oznaceni_odpovedi">
+                            B
+                        </div>
+                        <div class="text_odpovedi">
+                            Odpověď B (Tato odpověď je vybrána správně)
+                        </div>
+                    </div>
+                    <div class="carka_test">
+                    </div>
+                    <div class="odpoved odpoved_false" id="odpoved_3">
+                        <div class="oznaceni_odpovedi">
+                            C
+                        </div>
+                        <div class="text_odpovedi">
+                            Odpověď C (Tato odpověď je vybrána špatně)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="oddelovac">
+            </div>
+        </div>
+
+        <!--Způsobové okno--> <!-- Tohle by mohlo vyskočit, pokud by si to uživatel přál, kde by byl název a vysvětlení-->
+        <div id="zpusobovy_nositel" class="nic">
+            <div class="zavirac" onclick="zpusobove_okno()">
+            </div>
+            <div class="kontejner_zpusobovy">
+                <div id="zaviratel" class="material-icons" onclick="zpusobove_okno()">
+                    close
+                </div>
+                <div class="kontejner_zpusobovy_dolu">
+                    <div class="nadpis">
+                        Informace o návěsti
+                    </div>
+                    <div class="oddelovac">
+                    </div>
+                    <div class="nadpis_mensi" id="nazev_vysvetleni">
+                        "Název návěsti"
+                    </div>
+                    <div class="pismenka_za_sebou" id="popis_vysvetleni">
+                        "Popis návěsti"
+                    </div>
+                    <div class="oddelovac">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Zápatí-->
+        <div class="kontejner_dolu">
+            <div class="carka_vodorovna">
+            </div>
+            <div class="kontejner_vpravo">
+                <div class="autor autor1" onclick="window.open('https://steamcommunity.com/id/Maranaczech', '_blank');">
+                    Marana_CZE
+                </div>
+                <div class="carka_svisla">
+                </div>
+                <div class="autor autor2" onclick="window.open('https://steamcommunity.com/id/natsumiminako', '_blank');">
+                    Natsumi Chan
+                </div>
+            </div>
+            <div class="carka_vodorovna">
+            </div>
+            <div class="email" onclick="window.open('mailto:info@marana-cze.eu')">
+                info@marana-cze.eu
+            </div>
+        </div>
+
+        <!--Link na script-->
+        <script src="../script/start2.js"></script>
+        <script src="../script/modal.js"></script>
+        <script src="../script/popup.js"></script>
+
+        <!--By Marana_CZE-->
+    </body>
+</html>

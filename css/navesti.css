@@ -1,10 +1,5 @@
 /*Animace Návěstí*/
 
-.zvs, .konec, .privolavacka, .prevzeti, .odjezd, .zvs_rucni, .stuj, .vystraha, .obsazeno, .cely, .prestaveno, .zabrzdit, .brzda_ok, .odbrzdit, .souhlas, .odraz, .stuj_posun, .pomalu, .popotahnout, .stlacit, .priblizit, .vzdalit{
-    width: 400px;
-    height: 400px;
-}
-
 .souhlas{
     animation: souhlas 5s;
     animation-iteration-count: infinite;

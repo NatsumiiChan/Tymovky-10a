@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/navesti.css">
+        <link rel="icon" href="../images/ikonka.png">
+        <meta name="keywords" content="Ostatní návěsti">
+        <meta name="description" content="Návěstidla">
+        <title>Ostatní návěsti</title>
+    </head>
+    <body id="body">
+        
+        <!--Pojistka proti rozmazávání záhlavní fotky-->
+        <div class="anti-rozmazani">
+        </div>
+
+        <!--Záhlavní obrázek-->
+        <div class = "zahlavi" onclick="location.href='../index.html';">
+        </div>
+
+        <!--Navigace a tlačítka v ní-->
+        <div class="navigace">
+            <div class="material-icons zpatky" onclick="location.href='navesti.html';">
+                arrow_back
+            </div>
+            <div class="flex_pro_navigaci">
+                <div class="tlacitko" onclick="location.href='zakladni_info.html';">
+                    Základní informace
+                </div>
+                <div class="tlacitko_aktualni" onclick="location.href='navesti.html';">
+                    Návěsti
+                </div>
+                <div class="tlacitko" onclick="location.href='hledac.html';">
+                    Hledání návěsti
+                </div>
+                <div class="tlacitko" onclick="location.href='test.html';">
+                    Test
+                </div>
+            </div>
+            <div class="material-icons domu" onclick="location.href='../index.html';">
+                home
+            </div>
+        </div>
+
+        <!--Vybírač-->
+        <div class="zavirac_popupu nic" id="zavirac_popupu" onclick="vysunSe()">
+        </div>
+        <div class="nositel">
+            <div class="material-icons nastaveni" id="nastavovani" onclick="vysunSe()">
+            settings
+            </div>
+            <div class="nic" id="interier_popupu">
+                <div class="vybirac">
+                    <span class="material-icons krizek" onclick="vybirac('...')" id="..._vybirac">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        ...
+                    </span>
+                </div>
+            </div>
+        </div> 
+
+        <!--Obsah-->
+        <div class="kontejner_dolu">
+            <div class="nadpis">
+                Ostatní návěsti
+            </div>
+            <div class="pismenka za sebou">
+                Zde máte další zajímavé návěsti.
+            </div>
+            <div class="tlacitko_zpusobove" onclick="zpusobove_okno()">
+                Doplňující informace
+            </div>
+            <div class="kontejner_dolu" id="obecne">
+                <div class="nadpis_mensi">
+                    Obecné návěsti
+                </div>
+                <div class="karticky_ve_flexu">
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/slys_nav/img/pozor.png" alt="Pozor" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Pozor
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/slys_nav/img/svolani.png" alt="Svolávání všech zaměstnanců" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Svolávání všech zaměstnanců
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/slys_nav/img/poplach.png" alt="Požární poplach" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Požární poplach
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/slys_nav/img/pokyn.png" alt="Převzetí pokynu" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Převzetí pokynu
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/slys_nav/img/mirne.png" alt="Zabrzděte mírně" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Zabrzděte mírně
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/slys_nav/img/zabrzdete.png" alt="Zabrzděte úplně" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Zabrzděte úplně
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/slys_nav/img/povolte.png" alt="Povolte brzdy úplně" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Povolte brzdy úplně
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="kontejner_dolu" id="posun">
+                <div class="nadpis_mensi">
+                    Návěsti určené k posunu.
+                </div>
+                <div class="karticky_ve_flexu">
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/slys_nav/img/stlacit.png" alt="Stlačit" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Stlačit
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/slys_nav/img/pomalu.png" alt="Pomalu" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Pomalu
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/slys_nav/img/stuj.png" alt="Stůj" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Stůj
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/slys_nav/img/souhlas.png" alt="Souhlas k posunu" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Souhlas k posunu
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/slys_nav/img/uvolneno.png" alt="Výhybka je uvolněna" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Výhybka je uvolněna
+                        </div>
+                    </div>
+                    <div class="karticka" onclick="">
+                        <img src="../obsah/slys_nav/img/konec_posunu.png" alt="Uvolněte vlakovou cestu a zastavte rušící posun" class="fotecka_v_karticce">
+                        <div class="carka">
+                        </div>
+                        <div class="text_odkazovy">
+                            Uvolněte vlakovou cestu a zastavte rušící posun
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="oddelovac">
+            </div>
+        </div>
+
+        <!--Způsobové okno-->
+        <div id="zpusobovy_nositel" class="nic">
+            <div class="zavirac" onclick="zpusobove_okno()">
+            </div>
+            <div class="kontejner_zpusobovy">
+                <div id="zaviratel" class="material-icons" onclick="zpusobove_okno()">
+                    close
+                </div>
+                <div class="kontejner_zpusobovy_dolu">
+                    <div class="nadpis">
+                        Doplňující informace o použitých pojmech
+                    </div>
+                    <div class="oddelovac">
+                    </div>
+                    <div class="nadpis_mensi">
+                        Význam znaků
+                    </div>
+                    <div class="nadpis_mensi">
+                        "Kroužek"
+                    </div>
+                    <div class="pismenka_za_sebou">
+                        Krátký zvuk
+                    </div>
+                    <div class="nadpis_mensi">
+                        "Obdelníček"
+                    </div>
+                    <div class="pismenka_za_sebou">
+                        Dlouhý zvuk
+                    </div>
+                    <div class="nadpis_mensi">
+                        "Opakovaně"
+                    </div>
+                    <div class="pismenka_za_sebou">
+                        Stejná kombinace zvuků po dobu minimálně jedné minuty, jestliže není uvedeno jinak
+                    </div>
+                    <div class="nadpis_mensi">
+                        "Nástroj"
+                    </div>
+                    <div class="pismenka_za_sebou">
+                        Zařízení, díky kterému provedeme tuto kombinaci zvuků
+                    </div>
+                    <div class="oddelovac">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Zápatí-->
+        <div class="kontejner_dolu">
+            <div class="carka_vodorovna">
+            </div>
+            <div class="kontejner_vpravo">
+                <div class="autor autor1" onclick="window.open('https://steamcommunity.com/id/Maranaczech', '_blank');">
+                    Marana_CZE
+                </div>
+                <div class="carka_svisla">
+                </div>
+                <div class="autor autor2" onclick="window.open('https://steamcommunity.com/id/natsumiminako', '_blank');">
+                    Natsumi Chan
+                </div>
+            </div>
+            <div class="carka_vodorovna">
+            </div>
+            <div class="email" onclick="window.open('mailto:info@marana-cze.eu')">
+                info@marana-cze.eu
+            </div>
+        </div>
+
+        <!--Link na script-->
+        <script src="../script/start2.js"></script>
+        <script src="../script/modal.js"></script>
+        <script src="../script/popup.js"></script>
+        <script src="../script/vybirac.js"></script>
+
+        <!--By Marana_CZE-->
+    </body>
+</html>

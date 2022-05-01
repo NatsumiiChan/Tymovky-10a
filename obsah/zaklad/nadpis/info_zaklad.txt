@@ -1,5 +1,0 @@
-                   <div class="nadpis">
-                        Dělení kategorií návěstidel
-                    </div>
-                    <div class="oddelovac">
-                    </div>

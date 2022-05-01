@@ -17,13 +17,13 @@ Vytvoření modálního okna
 Doplnění animací
 Dolnění nové stránky
 
-v0.3 (15.04) (Marek)
+v0.314159265359  (15.04) (Marek)
 Úprava modálu pro správné fungování při změnšení velikosti
 Doplnění kartiček
 Přidána funkce pro email
 Přidány animace pro modál
 
-v0.4 (15.04) (Marek)
+v0.3 (15.04) (Marek)
 Upraven modál
 Upraveno tělo, aby při otevření modalu nešlo scrollovat
 Modál v samostatném JS souboru
@@ -33,14 +33,14 @@ Upraven čas animací
 Upravena velikost scrollbaru
 Upravena animace ZVS
 
-v0.5 (16.04) (Marek)
+v0.4 (16.04) (Marek)
 Přetvořeny kartičky
 Přidány další stránky
 Upraven scrollbar
 Návěsti v souboru styles.css přesunuty do souboru navesti.css
 Přidány další animace
 
-v0.6 (19.04) (Marek)
+v0.5 (19.04) (Marek)
 Opraven Modál u menších obrazovek
 Opraveny čáry a nahrazeny
 Upraven, opraven scrollbar a jeho součásti
@@ -50,12 +50,12 @@ Upraven systém dělení v rychlostnících
 Dodělána funkce Vybírač, která nám skryje nepožadované položky
 Částečně zaimplementována fce vybírač
 
-v0.666 (21.04) (Marek)
+v0.6 (21.04) (Marek)
 Fce vybírač vložena do popupu
 Upráva popupu
 Úprava potřebných věcí
 
-v0.69 (23.04) (Marek)
+v0.666 (23.04) (Marek)
 Upravena animace pro PopUp
 Opraveny chyby v textech
 Upravena navigace, kvůli možnosti překrytí tlačítek spolu s tlačítky "domů" a "zpět"
@@ -63,7 +63,7 @@ Přidán "zavírač" pro PopUp pro odstranění potřeby znovu mačkat tlačítk
 Nalezený problém s rozmázáváním záhlavní fotky, jsem vyřešil vložením <div> přes stránku
 PopUp + fce vybíráč implementována na další stránky
 
-v0.70 (27.04) (Marek)
+v0.68 (27.04) (Marek)
 Implementace fce vybírač do návěstí na vozidlech
 Přidány další návěsti mezi návěsti na vozidlech
 Úprava fotek v návěstí na vozidlech
@@ -74,3 +74,14 @@ Důležité návěsti jsou nově oranžové barvy
 Opravy drobných chyb
 Doplnění všech rychlostníků fotkami
 Doplněny "doplňující informace" k rychlostníkům
+
+v0.69 (30.04) (Marek)
+Přidání stránky "slyšitelných návěsti"
+Získaní potřebných věcí k této stránce
+Opraveny drobné chyby
+
+v0.70 (01.05) (Marek)
+Vytvořena kompletní šablona pro test
+Opraveny drobné chyby
+Upraveny fotky s obličeji strojvedoucích
+Odebrány zbytečné soubory
