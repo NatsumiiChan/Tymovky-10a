@@ -1,3 +1,5 @@
+// zatim nefunkcni, pouze testovaci verze
+
 <?php
     include "data.php";
     $c1 = $_POST['color1'];
