@@ -3,10 +3,12 @@
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="css/styles.css">
         <link rel="icon" href="images/ikonka.png">
         <meta name="keywords" content="Návěsti, Železnice, Návěstidla">
         <meta name="description" content="Návěstidla">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
         <title>Návěstidla</title>
     </head>
     <body id="body">
@@ -34,6 +36,32 @@
                 <div class="tlacitko" onclick="location.href='podstranky/test.html';">
                     Test
                 </div>
+            </div>
+            <div class="material-icons menu" onclick="vysun_menu()">
+                menu
+            </div>
+        </div>
+
+        <!--menu-->
+        <div id="menu" class="nic">
+            <div id="flexy_menu" class="flex_pro_menu">
+                <div class="material-icons krizek_menu" onclick="zasun_menu()">
+                    close
+                </div>
+                <div class="tlacitko" onclick="location.href='podstranky/zakladni_info.html';">
+                    Základní informace
+                </div>
+                <div class="tlacitko" onclick="location.href='podstranky/navesti.html';">
+                    Návěsti
+                </div>
+                <div class="tlacitko_aktualni" onclick="location.href='podstranky/hledac.html';">
+                    Hledání návěsti
+                </div>
+                <div class="tlacitko" onclick="location.href='podstranky/test.html';">
+                    Test
+                </div>
+            </div>
+            <div id="menu_cernota" class="zavirac_menu" onclick="zasun_menu()">
             </div>
         </div>
 
@@ -83,7 +111,7 @@
         <div class="kontejner_dolu">
             <div class="carka_vodorovna">
             </div>
-            <div class="kontejner_vpravo">
+            <div class="kontejner_vpravo_zapati">
                 <div class="autor autor1" onclick="window.open('https://steamcommunity.com/id/Maranaczech', '_blank');">
                     Marana_CZE
                 </div>
@@ -100,8 +128,10 @@
             </div>
         </div>
 
+
         <!--Link na základní script-->
         <script src="script/start1.js"></script>
+        <script src="script/menu.js"></script>
 
         <!--By Marana_CZE-->
     </body>

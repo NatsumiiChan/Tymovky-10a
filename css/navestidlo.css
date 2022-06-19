@@ -1,0 +1,131 @@
+/*pruh*/
+
+.pruh_ab, .pruh_ranzirka{
+    height: 500px;
+    width: 40px;
+}
+
+.pruh_ab{
+    content: url(../navestidlo/pruh/ab.png);
+    user-select: none;
+}
+
+.pruh_ranzirka{
+    content: url(../navestidlo/pruh/ranzirka.png);
+    user-select: none;
+}
+
+/*dalsi*/
+
+.strelnice, .strelnice_ab, .skupina, .skupina_true{
+    height: 100px;
+    width: 100px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.strelnice, .skupina{
+    background-color: #fff;
+}
+
+.strelnice_ab{
+    content: url(../navestidlo/dalsi/strelnice.png);
+}
+
+.skupina_true{
+    content: url(../navestidlo/dalsi/skupina.png);
+}
+
+/*svetelne*/
+
+.zacatek_navestidla, .konec_navestidla, .blok{
+    width: 220px;
+}
+
+.zacatek_navestidla, .konec_navestidla{
+    height: 80px;
+}
+
+.blok{
+    height: 110px;
+    content: url(../navestidlo/svetelna/blok.png);
+    margin-bottom: -80px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.zacatek_navestidla{
+    content: url(../navestidlo/svetelna/zacatek.png);
+}
+
+.konec_navestidla{
+    content: url(../navestidlo/svetelna/konec.png);
+}
+
+.barvicky{
+    width: 80px;
+    height: 80px;
+    position: relative;
+    left: calc(50% - 40px);
+    bottom: 15px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.stuj{
+    content: url(../navestidlo/barvicky/cervena.png);
+}
+
+.volno{
+    content: url(../navestidlo/barvicky/zelena.png);
+}
+
+.posun_zakazan{
+    content: url(../navestidlo/barvicky/modra.png);
+}
+
+.opakovana, .posun_dovolen{
+    content: url(../navestidlo/barvicky/bila.png);
+}
+
+.osmdesat{
+    animation: blikajici_zelena 1s;
+    animation-iteration-count: infinite;
+}
+
+.sto{
+    animation: blikajici_zelena 0.5s;
+    animation-iteration-count: infinite;
+}
+
+.vystraha{
+    content: url(../navestidlo/barvicky/zluta.png);
+}
+
+.ctyricet{
+    animation: blikajici_zluta 1s;
+    animation-iteration-count: infinite;
+}
+
+.sedesat{
+    animation: blikajici_zluta 0.5s;
+    animation-iteration-count: infinite;
+}
+
+/*Animace*/
+
+@keyframes blikajici_zluta{
+    0% {background: url("../navestidlo/barvicky/zluta.png"); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 100%;}
+    30% {background: url("../navestidlo/barvicky/zluta.png"); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0%;}
+    70% {background: url("../navestidlo/barvicky/zluta.png"); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0%;}
+    100% {background: url("../navestidlo/barvicky/zluta.png"); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 100%;}
+}
+
+@keyframes blikajici_zelena{
+    0% {background: url("../navestidlo/barvicky/zelena.png"); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 100%;}
+    30% {background: url("../navestidlo/barvicky/zelena.png"); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0%;}
+    70% {background: url("../navestidlo/barvicky/zelena.png"); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 0%;}
+    100% {background: url("../navestidlo/barvicky/zelena.png"); background-size: cover; background-repeat: no-repeat; background-position: center; opacity: 100%;}
+}
+
+/*mechaniky*/

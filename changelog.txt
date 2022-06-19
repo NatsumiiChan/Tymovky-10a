@@ -85,3 +85,10 @@ Vytvořena kompletní šablona pro test
 Opraveny drobné chyby
 Upraveny fotky s obličeji strojvedoucích
 Odebrány zbytečné soubory
+
+v0.72 (19.6) (Marek)
+Designová úprava hledače
+Dodělávání všech potřebných věcí pro to (tes.html - pro test, JS -> menic_navesti, vybersi, CSS -> Navesitdlo)
+
+v0.73 (19.6) (Marek)
+Responzivita

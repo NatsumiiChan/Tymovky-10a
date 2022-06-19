@@ -76,14 +76,10 @@
     $connect->set_charset("UTF8") or die("nenastaveno");
     echo "nastaveno<br>";
 
-    $SQL = "SELECT type, name, description, image_src, search_index FROM navestidla";
+    $SQL = "SELECT type, name, description, image_src, search_index FROM navestidla WHERE search_index='.$search.'";
     $result = $connect->query($SQL) or die("nepovedlo se ".$SQL);
     
-    while ($row = $result->fetch_object()) {
-        if ($search == $row->search_index) {
-            echo $row->type." ".$row->name." ".$row->description."<br>";
-        }
-    }
+    echo $row->type." ".$row->name." ".$row->description."<br>";
 
     $result->free();
     $connect->close();

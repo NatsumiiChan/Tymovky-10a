@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/navestidlo.css">
+        <link rel="icon" href="../images/ikonka.png">
+        <meta name="keywords" content="Návěsti na HV, HV, Hnací Vozidla">
+        <meta name="description" content="Návěstidla">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+        <title>Hledaní návěstí</title>
+    </head>
+    <body id="body">
+        
+        <!--Pojistka proti rozmazávání záhlavní fotky-->
+        <div class="anti-rozmazani">
+        </div>
+
+        <!--Záhlavní obrázek-->
+        <div class = "zahlavi" onclick="location.href='../index.html';">
+        </div>
+
+        <!--Navigace a tlačítka v ní-->
+        <div class="navigace">
+            <div class="flex_pro_navigaci">
+                <div class="tlacitko" onclick="location.href='zakladni_info.html';">
+                    Základní informace
+                </div>
+                <div class="tlacitko" onclick="location.href='navesti.html';">
+                    Návěsti
+                </div>
+                <div class="tlacitko_aktualni" onclick="location.href='hledac.html';">
+                    Hledání návěsti
+                </div>
+                <div class="tlacitko" onclick="location.href='test.html';">
+                    Test
+                </div>
+            </div>
+            <div class="material-icons domu" onclick="location.href='../index.html';">
+                home
+            </div>
+        </div>
+
+        <!--Obsah-->
+        <div class="kontejner_dolu">
+            <div class="nadpis">
+                Autoblok čtyřznaký
+            </div>
+            <div class="kontejner_vpravo" id="navestni">
+                <div class="kontejner_dolu_dvojity_navestidlo" id="navestni_misto">
+                    <div class="zacatek_navestidla">
+                    </div>
+                    <div class="blok" onclick="autoblok_navest('zluta')">
+                    </div>
+                    <div class="barvicky" id="zluta" onclick="autoblok_navest('zluta')">
+                    </div>
+                    <div class="blok" onclick="autoblok_navest('zelena')">
+                    </div>
+                    <div class="barvicky" id="zelena" onclick="autoblok_navest('zelena')">
+                    </div>
+                    <div class="blok" onclick="autoblok_navest('cervena')">
+                    </div>
+                    <div class="barvicky" id="cervena" onclick="autoblok_navest('cervena')">
+                    </div>
+                    <div class="blok" onclick="autoblok_navest('bila')">
+                    </div>
+                    <div class="barvicky" id="bila" onclick="autoblok_navest('bila')">
+                    </div>
+                    <div class="konec_navestidla">
+                    </div>
+                </div>
+                <div class="kontejner_dolu_dvojity">
+                    <div id="dalsi" class="strelnice" onclick="autoblok_strelnice()">
+                    </div>
+                    <div id="pruh_na_navestidle" class="pruh_ab">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='kontejner_dolu'>
+            <div class='nadpis'>
+                Autoblok tříznaký
+            </div>
+            <div class='kontejner_vpravo' id='navestni'>
+                <div class='kontejner_dolu_dvojity_navestidlo' id='navestni_misto'>
+                    <div class='zacatek_navestidla'>
+                    </div>
+                    <div class='blok' onclick='autoblok_navest('zluta')'>
+                    </div>
+                    <div class='barvicky' id='zluta' onclick='autoblok_navest('zluta')'>
+                    </div>
+                    <div class='blok' onclick='autoblok_navest('zelena')'>
+                    </div>
+                    <div class='barvicky' id='zelena' onclick='autoblok_navest('zelena')'>
+                    </div>
+                    <div class='blok' onclick='autoblok_navest('cervena')'>
+                    </div>
+                    <div class='barvicky' id='cervena' onclick='autoblok_navest('cervena')'>
+                    </div>
+                    <div class='konec_navestidla'>
+                    </div>
+                </div>
+                <div class='kontejner_dolu_dvojity'>
+                    <div id='dalsi' class='strelnice' onclick='autoblok_strelnice()'>
+                    </div>
+                    <div id='pruh_na_navestidle' class='pruh_ab'>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kontejner_dolu">
+            <div class="nadpis">
+                Světelná seřazovací návěstidla
+            </div>
+            <div class="kontejner_vpravo" id="navestni">
+                <div class="kontejner_dolu_dvojity_navestidlo" id="navestni_misto">
+                    <div class="zacatek_navestidla">
+                    </div>
+                    <div class="blok" onclick="ranzirka_navest('bila')">
+                    </div>
+                    <div class="barvicky" id="bila" onclick="ranzirka_navest('bila')">
+                    </div>
+                    <div class="blok" onclick="ranzirka_navest('modra')">
+                    </div>
+                    <div class="barvicky" id="modra" onclick="ranzirka_navest('modra')">
+                    </div>
+                    <div class="konec_navestidla">
+                    </div>
+                </div>
+                <div class="kontejner_dolu_dvojity">
+                    <div id="dalsi" class="skupina" onclick="ranzirka_skupina()">
+                    </div>
+                    <div id="pruh_na_navestidle" class="pruh_ranzirka">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Způsobové okno--> <!-- Tohle vyskočí a buď to popře existenci návěsti ve jménu SŽDC a vyvolá ďábla nebo jí to najde v D1 a vyvolá ďábla-->
+        <div id="zpusobovy_nositel" class="nic">
+            <div class="zavirac" onclick="zpusobove_okno()">
+            </div>
+            <div class="kontejner_zpusobovy">
+                <div id="zaviratel" class="material-icons" onclick="zpusobove_okno()">
+                    close
+                </div>
+                <div class="kontejner_zpusobovy_dolu">
+                    <div class="nadpis">
+                        Informace o návěsti
+                    </div>
+                    <div class="oddelovac">
+                    </div>
+                    <div class="nadpis_mensi" id="nazev_vysvetleni">
+                        "Název návěsti"
+                    </div>
+                    <div class="pismenka_za_sebou" id="popis_vysvetleni">
+                        "Popis návěsti"
+                    </div>
+                    <div class="oddelovac">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Zápatí-->
+        <div class="kontejner_dolu">
+            <div class="carka_vodorovna">
+            </div>
+            <div class="kontejner_vpravo">
+                <div class="autor autor1" onclick="window.open('https://steamcommunity.com/id/Maranaczech', '_blank');">
+                    Marana_CZE
+                </div>
+                <div class="carka_svisla">
+                </div>
+                <div class="autor autor2" onclick="window.open('https://steamcommunity.com/id/natsumiminako', '_blank');">
+                    Natsumi Chan
+                </div>
+            </div>
+            <div class="carka_vodorovna">
+            </div>
+            <div class="email" onclick="window.open('mailto:info@marana-cze.eu')">
+                info@marana-cze.eu
+            </div>
+        </div>
+
+        <!--Link na script-->
+        <script src="../script/start2.js"></script>
+        <script src="../script/modal.js"></script>
+        <script src="../script/vybersi.js"></script>
+        <script src="../script/menic_navesti.js"></script>
+
+        <!--By Marana_CZE-->
+    </body>
+</html>
