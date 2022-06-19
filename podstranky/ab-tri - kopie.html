@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway+Dots&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/styles.css">
         <link rel="stylesheet" href="../css/navestidlo.css">
         <link rel="icon" href="../images/ikonka.png">
@@ -73,37 +74,38 @@
         </div>
 
         <!--Obsah-->
-        <div class="kontejner_dolu">
-            <div class="nadpis">
-                Autoblok čtyřznaký
+        <div class='kontejner_dolu'>
+            <div class='nadpis'>
+                Autoblok tříznaký
             </div>
-            <div class="kontejner_vpravo" id="navestni">
-                <div class="kontejner_dolu_dvojity_navestidlo" id="navestni_misto">
-                    <div class="zacatek_navestidla">
+            <div class='kontejner_vpravo' id='navestni'>
+                <div class='kontejner_dolu_dvojity_navestidlo' id='navestni_misto'>
+                    <div class='zacatek_navestidla'>
                     </div>
-                    <div class="blok" onclick="autoblok_navest('zluta')">
+                    <div id="indikator" class='cislicovy_indikator' onclick="autoblok_indikator()">
                     </div>
-                    <div class="barvicky" id="zluta" onclick="autoblok_navest('zluta')">
+                    <div id="cislice" class="cislice_indikator" onclick="autoblok_indikator()">
+                        15
                     </div>
-                    <div class="blok" onclick="autoblok_navest('zelena')">
+                    <div class='blok' onclick="autoblok_navest('zluta')">
                     </div>
-                    <div class="barvicky" id="zelena" onclick="autoblok_navest('zelena')">
+                    <div class='barvicky' id='zluta' onclick="autoblok_navest('zluta')">
                     </div>
-                    <div class="blok" onclick="autoblok_navest('cervena')">
+                    <div class='blok' onclick="autoblok_navest('zelena')">
                     </div>
-                    <div class="barvicky" id="cervena" onclick="autoblok_navest('cervena')">
+                    <div class='barvicky' id='zelena' onclick="autoblok_navest('zelena')">
                     </div>
-                    <div class="blok" onclick="autoblok_navest('bila')">
+                    <div class='blok' onclick="autoblok_navest('cervena')">
                     </div>
-                    <div class="barvicky" id="bila" onclick="autoblok_navest('bila')">
+                    <div class='barvicky' id='cervena' onclick="autoblok_navest('cervena')">
                     </div>
-                    <div class="konec_navestidla">
+                    <div class='konec_navestidla'>
                     </div>
                 </div>
-                <div class="kontejner_dolu_dvojity">
-                    <div id="dalsi" class="strelnice" onclick="autoblok_strelnice()">
+                <div class='kontejner_dolu_dvojity'>
+                    <div id='dalsi' class='strelnice' onclick='autoblok_strelnice()'>
                     </div>
-                    <div id="pruh_na_navestidle" class="pruh_ab">
+                    <div id='pruh_na_navestidle' class='pruh_ab'>
                     </div>
                 </div>
             </div>
