@@ -44,11 +44,10 @@
         </div>
 
         <!--Obsah-->
-        <div id="tlacitko" class="vybersi" onclick="nullovnik()">
-            A..
-        </div>
-
         <div class="kontejner_dolu">
+            <div class="nadpis">
+                Autoblok čtyřznaký
+            </div>
             <div class="kontejner_vpravo" id="navestni">
                 <div class="kontejner_dolu_dvojity_navestidlo" id="navestni_misto">
                     <div class="zacatek_navestidla">
@@ -73,9 +72,67 @@
                     </div>
                 </div>
                 <div class="kontejner_dolu_dvojity">
-                    <div id="dalsi" class="strelnice_ab">
+                    <div id="dalsi" class="strelnice" onclick="autoblok_strelnice()">
                     </div>
                     <div id="pruh_na_navestidle" class="pruh_ab">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='kontejner_dolu'>
+            <div class='nadpis'>
+                Autoblok tříznaký
+            </div>
+            <div class='kontejner_vpravo' id='navestni'>
+                <div class='kontejner_dolu_dvojity_navestidlo' id='navestni_misto'>
+                    <div class='zacatek_navestidla'>
+                    </div>
+                    <div class='blok' onclick='autoblok_navest('zluta')'>
+                    </div>
+                    <div class='barvicky' id='zluta' onclick='autoblok_navest('zluta')'>
+                    </div>
+                    <div class='blok' onclick='autoblok_navest('zelena')'>
+                    </div>
+                    <div class='barvicky' id='zelena' onclick='autoblok_navest('zelena')'>
+                    </div>
+                    <div class='blok' onclick='autoblok_navest('cervena')'>
+                    </div>
+                    <div class='barvicky' id='cervena' onclick='autoblok_navest('cervena')'>
+                    </div>
+                    <div class='konec_navestidla'>
+                    </div>
+                </div>
+                <div class='kontejner_dolu_dvojity'>
+                    <div id='dalsi' class='strelnice' onclick='autoblok_strelnice()'>
+                    </div>
+                    <div id='pruh_na_navestidle' class='pruh_ab'>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kontejner_dolu">
+            <div class="nadpis">
+                Světelná seřazovací návěstidla
+            </div>
+            <div class="kontejner_vpravo" id="navestni">
+                <div class="kontejner_dolu_dvojity_navestidlo" id="navestni_misto">
+                    <div class="zacatek_navestidla">
+                    </div>
+                    <div class="blok" onclick="ranzirka_navest('bila')">
+                    </div>
+                    <div class="barvicky" id="bila" onclick="ranzirka_navest('bila')">
+                    </div>
+                    <div class="blok" onclick="ranzirka_navest('modra')">
+                    </div>
+                    <div class="barvicky" id="modra" onclick="ranzirka_navest('modra')">
+                    </div>
+                    <div class="konec_navestidla">
+                    </div>
+                </div>
+                <div class="kontejner_dolu_dvojity">
+                    <div id="dalsi" class="skupina" onclick="ranzirka_skupina()">
+                    </div>
+                    <div id="pruh_na_navestidle" class="pruh_ranzirka">
                     </div>
                 </div>
             </div>

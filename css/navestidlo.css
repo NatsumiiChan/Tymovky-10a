@@ -7,21 +7,33 @@
 
 .pruh_ab{
     content: url(../navestidlo/pruh/ab.png);
+    user-select: none;
 }
 
 .pruh_ranzirka{
     content: url(../navestidlo/pruh/ranzirka.png);
+    user-select: none;
 }
 
 /*dalsi*/
 
-.strelnice_ab{
+.strelnice, .strelnice_ab, .skupina, .skupina_true{
     height: 100px;
     width: 100px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.strelnice, .skupina{
+    background-color: #fff;
 }
 
 .strelnice_ab{
     content: url(../navestidlo/dalsi/strelnice.png);
+}
+
+.skupina_true{
+    content: url(../navestidlo/dalsi/skupina.png);
 }
 
 /*svetelne*/
@@ -66,6 +78,10 @@
 
 .volno{
     content: url(../navestidlo/barvicky/zelena.png);
+}
+
+.posun_zakazan{
+    content: url(../navestidlo/barvicky/modra.png);
 }
 
 .opakovana, .posun_dovolen{

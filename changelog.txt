@@ -88,4 +88,4 @@ Odebrány zbytečné soubory
 
 v0.72 (19.6) (Marek)
 Designová úprava hledače
-Dodělávání všech potřebných věcí pro to
+Dodělávání všech potřebných věcí pro to (tes.html - pro test, JS -> menic_navesti, vybersi, CSS -> Navesitdlo)
