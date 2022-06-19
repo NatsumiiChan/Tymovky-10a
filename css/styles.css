@@ -113,6 +113,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 40px;
+    z-index: 2;
 }
 
 .kontejner_dolu{
@@ -123,11 +124,16 @@ body{
     width: 37vw;
 }
 
+.kontejner_dolu_dvojity_navestidlo{
+    gap: 0px;
+}
+
 .kontejner_vpravo, .kontejner_vpravo_carkovaty{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 40px;
+    z-index: 2;
 }
 
 .kontejner_vlevo{
@@ -135,6 +141,7 @@ body{
     flex-direction: row-reverse;
     flex-wrap: nowrap;
     gap: 40px;
+    z-index: 2;
 }
 
 .kontejner_vpravo, .kontejner_vlevo{
@@ -318,7 +325,7 @@ body{
     gap: 50px;
 }
 
-.karticka, .karticka_dulezita{
+.karticka, .karticka_dulezita, .karticka_neaktualni{
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -340,6 +347,10 @@ body{
 
 .karticka_dulezita{
     background-color: #fc0;
+}
+
+.karticka_neaktualni{
+    background-color: #1fd;
 }
 
 .fotecka_v_karticce{
@@ -614,9 +625,33 @@ body{
     box-shadow: 3px 3px 10px 1px #555;
 }
 
+/*Select css*/
+
+.vybersi{
+    cursor: pointer;
+    background-color: #fff;
+    padding: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    user-select: none;
+    color: #333;
+    border-color: #333;
+    box-shadow: 3px 3px 5px 1px #777;
+}
+
+.vybersi:hover, .vybersi_tedka{
+    color: #000;
+    border-color: #000;
+    box-shadow: 3px 3px 5px 1px #222;
+}
+
+
 /*Animace*/
 
-.tlacitko_zpusobove:hover, .tlacitko_zpusobove, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko, .email, .email:hover, .text_odkazovy, .text_odkazovy:hover, .carka, .carka:hover, .karticka, .karticka:hover, .domu, .domu:hover, .zpatky, .zpatky:hover, .nastaveni, .nastaveni:hover, .krizek, .krizek_neaktivni, .nastaveni_true, .karticka_dulezita, .karticka_dulezita:hover, .odpoved_vybirani:hover, .odpoved, .odpoved_vybirani, .odpoved_true, .odpoved_false, .oznaceni_odpovedi, .text_odpovedi{
+.tlacitko_zpusobove:hover, .tlacitko_zpusobove, #zaviratel:hover, #zaviratel, .autor:hover, .autor, .tlacitko_aktualni, .tlacitko:hover, .tlacitko, .email, .email:hover, .text_odkazovy, .text_odkazovy:hover, .carka, .carka:hover, .karticka, .karticka:hover, .domu, .domu:hover, .zpatky, .zpatky:hover, .nastaveni, .nastaveni:hover, .krizek, .krizek_neaktivni, .nastaveni_true, .karticka_dulezita, .karticka_dulezita:hover, .odpoved_vybirani:hover, .odpoved, .odpoved_vybirani, .odpoved_true, .odpoved_false, .oznaceni_odpovedi, .text_odpovedi, .vybersi, .vybersi:hover, .vybersi_tedka{
     transition: 0.2s;
 }
 

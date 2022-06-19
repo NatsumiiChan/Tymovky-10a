@@ -1,57 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hledani navesti</title>
-</head>
-<body>
-    <!--Tabulka nahrazujici hlavni navest, kde si uzivatel vybere barvy jednotliveho svetla a vyhledani v databazi
-    zda takova navest existuje popripade jeji vyznam-->
-    <form name="uwuForm" action="../php/search.php" method="POST">
-        <table bgcolor="black">
-            <tr>
-                <td width="20" id="uwu1"></td>
-                <td>
-                    <select name='color1'>
-                        <option value=''>Prazdna</option>
-                        <option value='red'>Cervena</option>
-                        <option value='yellow'>Zluta</option>
-                        <option value='green'>Zelena</option>
-                        <option value='white'>Bila</option>
-                        <option value='blue'>Modra</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td width="20" id="uwu2"></td>
-                <td>
-                    <select name='color2'>
-                        <option value=''>Prazdna</option>
-                        <option value='red'>Cervena</option>
-                        <option value='yellow'>Zluta</option>
-                        <option value='green'>Zelena</option>
-                        <option value='white'>Bila</option>
-                        <option value='blue'>Modra</option>
-                    </select>
-                </td>
-            </tr>
-            <tr>
-                <td width="20" id="uwu3"></td>
-                <td>
-                    <select name='color3'>
-                        <option value=''>Prazdna</option>
-                        <option value='red'>Cervena</option>
-                        <option value='yellow'>Zluta</option>
-                        <option value='green'>Zelena</option>
-                        <option value='white'>Bila</option>
-                        <option value='blue'>Modra</option>
-                    </select>
-                </td>
-            </tr>
-        </table>
-        <input type="button" value="Update" onclick="update()">
-        <input type="submit" value="Search">
-    </form>
-    <script src="../script/search.js"></script>
-</body>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="../css/styles.css">
+        <link rel="stylesheet" href="../css/navestidlo.css">
+        <link rel="icon" href="../images/ikonka.png">
+        <meta name="keywords" content="Návěsti na HV, HV, Hnací Vozidla">
+        <meta name="description" content="Návěstidla">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+        <title>Hledaní návěstí</title>
+    </head>
+    <body id="body">
+        
+        <!--Pojistka proti rozmazávání záhlavní fotky-->
+        <div class="anti-rozmazani">
+        </div>
+
+        <!--Záhlavní obrázek-->
+        <div class = "zahlavi" onclick="location.href='../index.html';">
+        </div>
+
+        <!--Navigace a tlačítka v ní-->
+        <div class="navigace">
+            <div class="flex_pro_navigaci">
+                <div class="tlacitko" onclick="location.href='zakladni_info.html';">
+                    Základní informace
+                </div>
+                <div class="tlacitko" onclick="location.href='navesti.html';">
+                    Návěsti
+                </div>
+                <div class="tlacitko_aktualni" onclick="location.href='hledac.html';">
+                    Hledání návěsti
+                </div>
+                <div class="tlacitko" onclick="location.href='test.html';">
+                    Test
+                </div>
+            </div>
+            <div class="material-icons domu" onclick="location.href='../index.html';">
+                home
+            </div>
+        </div>
+
+        <!--Obsah-->
+        <div class="kontejner_dolu">
+            <div class="kontejner_dolu" id="druh">
+                <div class="nadpis">
+                    Druh návěstidla
+                </div>
+                <div class="kontejner_vpravo">
+                    <div id="tlacitko_ab" class="vybersi" onclick="vybersi_druh('ab')">
+                        Autoblok
+                    </div>
+                    <div id="tlacitko_ranzirka" class="vybersi" onclick="vybersi_druh('ranzirka')">
+                        Seřazovací návěstidlo
+                    </div>
+                </div>
+            </div>
+            <div class="kontejner_dolu nic" id="ab">
+                <div class="nadpis">
+                    Verze návěstidla
+                </div>
+                <div class="kontejner_vpravo">
+                    <div class="vybersi" onclick="vybersi_ab('triznaky')">
+                        Tříznaký
+                    </div>
+                    <div class="vybersi" onclick="vybersi_ab('ctyrznaky')">
+                        Čtyřznaký
+                    </div>
+                </div>
+            </div>
+            <div class="kontejner_dolu nic" id="ranzirka">
+                <div class="nadpis">
+                    Verze návěstidla
+                </div>
+                <div class="kontejner_vpravo">
+                    <div class="vybersi" onclick="vybersi_ranzirka('svetelna')">
+                        Světelná seřazovací návěstidla
+                    </div>
+                    <div class="vybersi" onclick="vybersi_ranzirka('mechanicka')">
+                        Mechanická seřazovací návěstidla
+                    </div>
+                </div>
+            </div>
+            <div class="kontejner_vpravo" id="navestni">
+                <div class="kontejner_dolu_dvojity" id="navestni_misto">
+
+                </div>
+                <div class="kontejner_dolu_dvojity">
+                    <div id="strelnice" class="">
+                    </div>
+                    <div id="pruh_na_navestidle" class="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Způsobové okno--> <!-- Tohle vyskočí a buď to popře existenci návěsti ve jménu SŽDC a vyvolá ďábla nebo jí to najde v D1 a vyvolá ďábla-->
+        <div id="zpusobovy_nositel" class="nic">
+            <div class="zavirac" onclick="zpusobove_okno()">
+            </div>
+            <div class="kontejner_zpusobovy">
+                <div id="zaviratel" class="material-icons" onclick="zpusobove_okno()">
+                    close
+                </div>
+                <div class="kontejner_zpusobovy_dolu">
+                    <div class="nadpis">
+                        Informace o návěsti
+                    </div>
+                    <div class="oddelovac">
+                    </div>
+                    <div class="nadpis_mensi" id="nazev_vysvetleni">
+                        "Název návěsti"
+                    </div>
+                    <div class="pismenka_za_sebou" id="popis_vysvetleni">
+                        "Popis návěsti"
+                    </div>
+                    <div class="oddelovac">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Zápatí-->
+        <div class="kontejner_dolu">
+            <div class="carka_vodorovna">
+            </div>
+            <div class="kontejner_vpravo">
+                <div class="autor autor1" onclick="window.open('https://steamcommunity.com/id/Maranaczech', '_blank');">
+                    Marana_CZE
+                </div>
+                <div class="carka_svisla">
+                </div>
+                <div class="autor autor2" onclick="window.open('https://steamcommunity.com/id/natsumiminako', '_blank');">
+                    Natsumi Chan
+                </div>
+            </div>
+            <div class="carka_vodorovna">
+            </div>
+            <div class="email" onclick="window.open('mailto:info@marana-cze.eu')">
+                info@marana-cze.eu
+            </div>
+        </div>
+
+        <!--Link na script-->
+        <script src="../script/start2.js"></script>
+        <script src="../script/modal.js"></script>
+        <script src="../script/vybersi.js"></script>
+
+        <!--By Marana_CZE-->
+    </body>
 </html>
