@@ -5,12 +5,12 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source Sans Pro">
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <link rel="stylesheet" href="../css/styles.css">
-        <link rel="stylesheet" href="../css/navesti.css">
+        <link rel="stylesheet" href="../css/navestidlo.css">
         <link rel="icon" href="../images/ikonka.png">
         <meta name="keywords" content="Návěsti na HV, HV, Hnací Vozidla">
         <meta name="description" content="Návěstidla">
         <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
-        <title>Test</title>
+        <title>Hledaní návěstí</title>
     </head>
     <body id="body">
         
@@ -24,6 +24,9 @@
 
         <!--Navigace a tlačítka v ní-->
         <div class="navigace">
+            <div class="material-icons zpatky" onclick="location.href='hledac.html';">
+                arrow_back
+            </div>
             <div class="flex_pro_navigaci">
                 <div class="tlacitko" onclick="location.href='zakladni_info.html';">
                     Základní informace
@@ -31,10 +34,10 @@
                 <div class="tlacitko" onclick="location.href='navesti.html';">
                     Návěsti
                 </div>
-                <div class="tlacitko" onclick="location.href='hledac.html';">
+                <div class="tlacitko_aktualni" onclick="location.href='hledac.html';">
                     Hledání návěsti
                 </div>
-                <div class="tlacitko_aktualni" onclick="location.href='test.html';">
+                <div class="tlacitko" onclick="location.href='test.html';">
                     Test
                 </div>
             </div>
@@ -58,10 +61,10 @@
                 <div class="tlacitko" onclick="location.href='navesti.html';">
                     Návěsti
                 </div>
-                <div class="tlacitko" onclick="location.href='hledac.html';">
+                <div class="tlacitko_aktualni" onclick="location.href='hledac.html';">
                     Hledání návěsti
                 </div>
-                <div class="tlacitko_aktualni" onclick="location.href='test.html';">
+                <div class="tlacitko" onclick="location.href='test.html';">
                     Test
                 </div>
             </div>
@@ -70,44 +73,39 @@
         </div>
 
         <!--Obsah-->
-        <div class="kontejner_dolu">
-            <div class="oddelovac">
+        <div class='kontejner_dolu'>
+            <div class='nadpis'>
+                Autoblok tříznaký
             </div>
-            <div class="nadpis">
-                Test na návěsti
-            </div>
-            <div class="test_kontejner">
-                <div class="img_test" id="img_na_testu">
-                    <div alt="Stůj, zastavte všemi prostředky." class="fotecka_na_testu zvs">
+            <div class='kontejner_vpravo' id='navestni'>
+                <div class='kontejner_dolu_dvojity_navestidlo' id='navestni_misto'>
+                    <div class='zacatek_navestidla'>
+                    </div>
+                    <div class='blok' onclick="autoblok_navest('zluta')">
+                    </div>
+                    <div class='barvicky' id='zluta' onclick="autoblok_navest('zluta')">
+                    </div>
+                    <div class='blok' onclick="autoblok_navest('zelena')">
+                    </div>
+                    <div class='barvicky' id='zelena' onclick="autoblok_navest('zelena')">
+                    </div>
+                    <div class='blok' onclick="autoblok_navest('cervena')">
+                    </div>
+                    <div class='barvicky' id='cervena' onclick="autoblok_navest('cervena')">
+                    </div>
+                    <div class='konec_navestidla'>
                     </div>
                 </div>
-                <div class="odpovedi">
-                    <div class="odpoved odpoved_vybirani">
-                        <div class="text_odpovedi">
-                            Odpoved 1
-                        </div>
+                <div class='kontejner_dolu_dvojity'>
+                    <div id='dalsi' class='strelnice' onclick='autoblok_strelnice()'>
                     </div>
-                    <div class="carka_test">
-                    </div>
-                    <div class="odpoved odpoved_vybirani">
-                        <div class="text_odpovedi">
-                            Odpoved 2
-                        </div>
-                    </div>
-                    <div class="carka_test">
-                    </div>
-                    <div class="odpoved odpoved_vybirani">
-                        <div class="text_odpovedi">
-                            Odpoved 3
-                        </div>
+                    <div id='pruh_na_navestidle' class='pruh_ab'>
                     </div>
                 </div>
-            </div>
-            <div class="oddelovac">
             </div>
         </div>
 
-        <!--Způsobové okno--> <!-- Tohle by mohlo vyskočit, pokud by si to uživatel přál, kde by byl název a vysvětlení-->
+        <!--Způsobové okno--> <!-- Tohle vyskočí a buď to popře existenci návěsti ve jménu SŽDC a vyvolá ďábla nebo jí to najde v D1 a vyvolá ďábla-->
         <div id="zpusobovy_nositel" class="nic">
             <div class="zavirac" onclick="zpusobove_okno()">
             </div>
@@ -154,10 +152,11 @@
             </div>
         </div>
 
-
         <!--Link na script-->
         <script src="../script/start2.js"></script>
         <script src="../script/modal.js"></script>
+        <script src="../script/vybersi.js"></script>
+        <script src="../script/menic_navesti_ab.js"></script>
         <script src="../script/menu.js"></script>
 
         <!--By Marana_CZE-->

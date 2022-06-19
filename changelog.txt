@@ -92,3 +92,8 @@ Dodělávání všech potřebných věcí pro to (tes.html - pro test, JS -> men
 
 v0.73 (19.6) (Marek)
 Responzivita
+
+v0.74 (19.6) (Marek)
+Upraven hledač -> na stránu je uživatel přesměrován -> nižší objem dat je třeba, vzhledem k rozdělení scriptu, atd, dle návěsti
+Úprava drobných chyb
+Úprava responzivity
