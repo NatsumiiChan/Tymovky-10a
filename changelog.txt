@@ -87,6 +87,7 @@ Upraveny fotky s obličeji strojvedoucích
 Odebrány zbytečné soubory
 
 v0.72 (19.6) (Marek)
+Úprava návěstí -> Starší návěsti z D1 2018, neplatné pro D1 2022, byly zvírazněny
 Designová úprava hledače
 Dodělávání všech potřebných věcí pro to (tes.html - pro test, JS -> menic_navesti, vybersi, CSS -> Navesitdlo)
 
@@ -97,3 +98,8 @@ v0.74 (19.6) (Marek)
 Upraven hledač -> na stránu je uživatel přesměrován -> nižší objem dat je třeba, vzhledem k rozdělení scriptu, atd, dle návěsti
 Úprava drobných chyb
 Úprava responzivity
+
+v0.75 (19.6) (Marek)
+Úprava obrázků
+Zmenšení velikosti obrázků
+Přidán autoblok s číslicovým indikátorem

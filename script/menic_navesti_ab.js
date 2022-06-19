@@ -2,6 +2,21 @@ var zelena = 0;
 var zluta = 0;
 var bila = 0;
 var cervena = 0;
+var indikator = 1;
+
+function autoblok_indikator(){
+    if (indikator < 10){
+        indikator += 2
+    }
+    else if (indikator < 14){
+        indikator += 1
+    }
+    else{
+        indikator = 3
+    }
+
+    document.querySelector("#cislice").innerHTML = indikator;
+}
 
 function autoblok_strelnice(){
     document.querySelector("#dalsi").classList.toggle("strelnice_ab");

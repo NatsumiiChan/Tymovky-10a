@@ -38,7 +38,7 @@
 
 /*svetelne*/
 
-.zacatek_navestidla, .konec_navestidla, .blok{
+.zacatek_navestidla, .konec_navestidla, .blok, .cislicovy_indikator{
     width: 220px;
 }
 
@@ -52,6 +52,25 @@
     margin-bottom: -80px;
     cursor: pointer;
     user-select: none;
+}
+
+.cislicovy_indikator{
+    height: 220px;
+    content: url(../navestidlo/svetelna/cislicovy_indikator.png);
+    cursor: pointer;
+    user-select: none;
+    margin-bottom: -220px;
+}
+
+.cislice_indikator{
+    cursor: pointer;
+    user-select: none;
+    font-family: "Raleway Dots", sans-serif;
+    text-align: center;
+    line-height: 220px;
+    font-size: 110px;
+    color: #ea3;
+    position: relative;
 }
 
 .zacatek_navestidla{
@@ -70,6 +89,7 @@
     bottom: 15px;
     cursor: pointer;
     user-select: none;
+    border-radius: 50%;
 }
 
 .stuj{
