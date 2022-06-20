@@ -2,8 +2,10 @@
     include "../php/data.php";
     session_start();
     $connect = new mysqli($host, $user, $psw, $db);
-    $answerCount = rand(1,4);
-    $_SESSION["answerCount"] = $answerCount;
+    $selectedAnswer = rand(1, 4);
+    $answers = array($selectedAnswer);
+    $_SESSION["answers"] = $answers;
+    $_SESSION["selectedAnswer"] = $selectedAnswer;
 ?>
 
 <!DOCTYPE html>
@@ -35,19 +37,19 @@
                         var answer = correctAnswer.correct_answer;
                         if (selectedAnswer == answer) {
                             switch (selectedAnswer) {
-                                case "A":
+                                case 1:
                                     $('#odpoved_1').addClass('odpoved_true');
                                     $('#odpoved_1').removeClass('odpoved_vybirani');
                                     $('#odpoved_2').removeClass('odpoved_vybirani');
                                     $('#odpoved_3').removeClass('odpoved_vybirani');
                                     break;
-                                case "B":
+                                case 2:
                                     $('#odpoved_2').addClass('odpoved_true');
                                     $('#odpoved_1').removeClass('odpoved_vybirani');
                                     $('#odpoved_2').removeClass('odpoved_vybirani');
                                     $('#odpoved_3').removeClass('odpoved_vybirani');
                                     break;
-                                case "C":
+                                case 3:
                                     $('#odpoved_3').addClass('odpoved_true');
                                     $('#odpoved_1').removeClass('odpoved_vybirani');
                                     $('#odpoved_2').removeClass('odpoved_vybirani');
@@ -56,19 +58,19 @@
                             }
                         } else {
                             switch (selectedAnswer) {
-                                case "A":
+                                case 1:
                                     $('#odpoved_1').addClass('odpoved_false');
                                     $('#odpoved_1').removeClass('odpoved_vybirani');
                                     $('#odpoved_2').removeClass('odpoved_vybirani');
                                     $('#odpoved_3').removeClass('odpoved_vybirani');
                                     break;
-                                case "B":
+                                case 2:
                                     $('#odpoved_2').addClass('odpoved_false');
                                     $('#odpoved_1').removeClass('odpoved_vybirani');
                                     $('#odpoved_2').removeClass('odpoved_vybirani');
                                     $('#odpoved_3').removeClass('odpoved_vybirani');
                                     break;
-                                case "C":
+                                case 3:
                                     $('#odpoved_3').addClass('odpoved_false');
                                     $('#odpoved_1').removeClass('odpoved_vybirani');
                                     $('#odpoved_2').removeClass('odpoved_vybirani');
@@ -102,6 +104,12 @@
                     }
                 }
             }
+
+            $(document).ready(function() {
+                $("#next").click(function() {
+                    $("#test").load("../php/get_next_question.php");
+                });
+            });
         </script>
     </head>
     <body id="body">
@@ -164,74 +172,53 @@
         <!--Obsah-->
         <div class="kontejner_dolu">
             <div class="oddelovac">
+                
             </div>
+            
             <div class="nadpis">
                 Test na návěsti
-                <!--<button id="btn" onclick="location.href='test.php';">Dalsi</button>-->
             </div>
-            <div class="vybersi" onclick="location.href='test.php';">
+            <div class="vybersi" id="next">
                 Další otázka
             </div>
-            <div class="test_kontejner">
-                <div class="img_test" id="img_na_testu">
-                    <div alt="Stůj, zastavte všemi prostředky." class="fotecka_na_testu zvs">
-                    </div>
-                </div>
-                <div class="odpovedi">
-                    <div class="odpoved odpoved_vybirani" id="odpoved_1" onclick="checkAnswer('A')">
-                        <div class="oznaceni_odpovedi">
-                            A
-                        </div>
-                        <div class="text_odpovedi">
-                            <?php
-                                $sql = "SELECT answer_one FROM navestidla_test WHERE idnavestidla_test = $answerCount";
-                                $result = mysqli_query($connect, $sql);
-                                if (mysqli_num_rows($result) > 0) {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        echo $row['answer_one'];
-                                    }
-                                }
-                            ?>
-                        </div>
-                    </div>
-                    <div class="carka_test">
-                    </div>
-                    <div class="odpoved odpoved_vybirani" id="odpoved_2" onclick="checkAnswer('B')">
-                        <div class="oznaceni_odpovedi">
-                            B
-                        </div>
-                        <div class="text_odpovedi">
-                            <?php
-                                $sql = "SELECT answer_two FROM navestidla_test WHERE idnavestidla_test = $answerCount";
-                                $result = mysqli_query($connect, $sql);
-                                if (mysqli_num_rows($result) > 0) {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        echo $row['answer_two'];
-                                    }
-                                }
-                            ?>
-                        </div>
-                    </div>
-                    <div class="carka_test">
-                    </div>
-                    <div class="odpoved odpoved_vybirani" id="odpoved_3" onclick="checkAnswer('C')">
-                        <div class="oznaceni_odpovedi">
-                            C
-                        </div>
-                        <div class="text_odpovedi">
-                            <?php
-                                $sql = "SELECT answer_three FROM navestidla_test WHERE idnavestidla_test = $answerCount";
-                                $result = mysqli_query($connect, $sql);
-                                $answerCount++;
-                                if (mysqli_num_rows($result) > 0) {
-                                    while ($row = mysqli_fetch_assoc($result)) {
-                                        echo $row['answer_three'];
-                                    }
-                                }
-                            ?>
-                        </div>
-                    </div>
-                </div>
+            <div class='test_kontejner' id='test'>
+                <?php
+                    $sql = "SELECT name, image_src, answer_one, answer_two, answer_three FROM navestidla_test WHERE idnavestidla_test = $selectedAnswer";
+                    $result = mysqli_query($connect, $sql);
+                    
+                    echo "<div class='img_test' id='img_na_testu'>";
+                    while($row = mysqli_fetch_array($result)){
+                        $name = $row['name'];
+                        $image_src = $row['image_src'];
+                        $answer_one = $row['answer_one'];
+                        $answer_two = $row['answer_two'];
+                        $answer_three = $row['answer_three'];
+                        if ($image_src[0] == '.') {
+                            echo "<img src='$image_src' alt='$name' class='fotecka_na_testu'>";
+                        } else {
+                            echo "<div alt='$name' class='fotecka_na_testu $image_src'></div>";
+                        }
+                        echo "</div>";
+                        echo "<div class='odpovedi'>";
+                            echo "<div class='odpoved odpoved_vybirani' id='odpoved_1' onclick='checkAnswer(1)'>";
+                                echo "<div class='oznaceni_odpovedi'>A</div>";
+                                echo "<div class='text_odpovedi'>$answer_one</div>";
+                            echo "</div>";
+
+                            echo "<div class='carka_test'></div>";
+                            echo "<div class='odpoved odpoved_vybirani' id='odpoved_2' onclick='checkAnswer(2)'>";
+                                echo "<div class='oznaceni_odpovedi'>B</div>";
+                                echo "<div class='text_odpovedi'>$answer_two</div>";
+                            echo "</div>";
+
+                            echo "<div class='carka_test'></div>";
+                            echo "<div class='odpoved odpoved_vybirani' id='odpoved_3' onclick='checkAnswer(3)'>";
+                                echo "<div class='oznaceni_odpovedi'>C</div>";
+                                echo "<div class='text_odpovedi'>$answer_three</div>";
+                            echo "</div>";
+                        echo "</div>";
+                    }
+                ?>
             </div>
             <div class="oddelovac">
             </div>
