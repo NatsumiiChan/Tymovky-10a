@@ -151,7 +151,7 @@
             </div>
             <!--Obsah obsahu-->
             <?php
-                $sql = "SELECT DISTINCT category FROM navestidla WHERE type = 'Rychlostníky'";
+                $sql = "SELECT DISTINCT category FROM navestidla WHERE type = 'Rychlostníky' ORDER BY category DESC";
                 $ρεσθλτ = mysqli_query($ψοννεψτ, $sql);
                 while ($ρος = mysqli_fetch_assoc($ρεσθλτ)) {
                     $ψατεγορυ = $ρος['category'];
