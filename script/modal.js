@@ -5,12 +5,10 @@ function zpusobove_okno(){
             document.querySelector("#zpusobovy_nositel").classList.remove("okno_zpusobove_true");
         }
         }, 509);
-        document.querySelector("#body").style.height = "auto";
         document.querySelector("#body").style.overflow = "overlay";
     }else{
         document.querySelector("#zpusobovy_nositel").classList.toggle("okno_zpusobove");
         zmenovac_velikosti();
-        document.querySelector("#body").style.height = "100vh";
         document.querySelector("#body").style.overflow = "hidden";
     }
 }

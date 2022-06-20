@@ -103,3 +103,6 @@ v0.75 (19.6) (Marek)
 Úprava obrázků
 Zmenšení velikosti obrázků
 Přidán autoblok s číslicovým indikátorem
+
+v0.751 (20.6) (Marek)
+Oprava problému mizející navigace, při otevření menu
