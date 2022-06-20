@@ -1,3 +1,9 @@
+<?php
+    include "../php/data.php";
+    $ψοννεψτ = new mysqli($host, $user, $psw, $db);
+?>
+
+
 <!DOCTYPE html>
 <html lang="cs">
     <head>
@@ -38,7 +44,7 @@
                 <div class="tlacitko" onclick="location.href='hledac.html';">
                     Hledání návěsti
                 </div>
-                <div class="tlacitko" onclick="location.href='test.html';">
+                <div class="tlacitko" onclick="location.href='test.php';">
                     Test
                 </div>
             </div>
@@ -65,7 +71,7 @@
                 <div class="tlacitko" onclick="location.href='hledac.html';">
                     Hledání návěsti
                 </div>
-                <div class="tlacitko" onclick="location.href='test.html';">
+                <div class="tlacitko" onclick="location.href='test.php';">
                     Test
                 </div>
             </div>
@@ -144,250 +150,54 @@
                 Doplňující informace
             </div>
             <!--Obsah obsahu-->
-            <div class="kontejner_dolu" id="ns">
-                <div class="nadpis_mensi">
-                    Rychlostníky NS
-                </div>
-                <div class="karticky_ve_flexu">
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/navesti/ns.png" alt="Rychlostník NS" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Rychlostník NS
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/predvesti/ns.png" alt="Předvěst rychlostníku NS" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Předvěstník rychlostníku NS
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/predvesti/konec.png" alt="Předvěst konce rychlostníku NS" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Předvěstník konce rychlostníku NS
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/navesti/konec.png" alt="Konec rychlostníku NS" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Konec rychlostníku NS
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/navesti/lokomotiva.png" alt="Tabulka s lokomotivou" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Tabulka s lokomotivou
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="kontejner_dolu" id="n">
-                <div class="nadpis_mensi">
-                    Rychlostníky N
-                </div>
-                <div class="karticky_ve_flexu">
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/navesti/n.png" alt="Rychlostník N" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Rychlostník N
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/navesti/dva_n.png" alt="Dva rychlostníky N nad sebou" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Dva rychlostníky N nad sebou
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/navesti/dva_n_s_carkou.png" alt="Dva rychlostníky N se svislými černými pruhy" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Dva rychlostníky N se svislými černými pruhy
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/predvesti/n.png" alt="Předvěst rychlostníku N" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Předvěstník rychlostníku N
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/predvesti/dva_n.png" alt="Předvěst dvou rychlostníků N" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Předvěstník dvou rychlostníků N
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/navesti/lokomotiva.png" alt="Tabulka s lokomotivou" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Tabulka s lokomotivou
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="kontejner_dolu" id="prechod">
-                <div class="nadpis_mensi">
-                    Rychlostníky 3
-                </div>
-                <div class="karticky_ve_flexu">
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/navesti/r3.png" alt="Rychlostník 3. přechodové skupiny" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Rychlostník 3
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/predvesti/r3.png" alt="Předvěst rychlostníku 3. přechodové skupiny" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Předvěstník rychlostníku 3
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/navesti/lokomotiva.png" alt="Tabulka s lokomotivou" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Tabulka s lokomotivou
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="kontejner_dolu" id="r">
-                <div class="nadpis_mensi">
-                    Rychlostníky R
-                </div>
-                <div class="karticky_ve_flexu">
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/navesti/r.png" alt="Rychlostník R" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Rychlostník R
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/predvesti/r.png" alt="Předvěst rychlostníku R" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Předvěstník rychlostníku R
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/navesti/lokomotiva.png" alt="Tabulka s lokomotivou" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Tabulka s lokomotivou
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="kontejner_dolu" id="indikator">
-                <div class="nadpis_mensi">
-                    Indikátory
-                </div>
-                <div class="karticky_ve_flexu">
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/navesti/indikator.png" alt="Indikátor" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Indikátor
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/predvesti/indikator.png" alt="Předvěst indikátoru" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Předvěstník indikátoru
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="kontejner_dolu" id="pj">
-                <div class="nadpis_mensi">
-                    Pomalé jízdy
-                </div>
-                <div class="karticky_ve_flexu">
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/pj/t.png" alt="Tabulka s T" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Tabulka s T
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/pj/zacatek.png" alt="Začátek PJ" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Začátek PJ
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/pj/nepred.png" alt="Začátek nepředvěstěné PJ" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Začátek nepředvěstěné PJ
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/pj/konec.png" alt="Konec PJ" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Konec PJ
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/pj/predvest.png" alt="Předvěst PJ" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Předvěstní štít PJ
-                        </div>
-                    </div>
-                    <div class="karticka" onclick="">
-                        <img src="../obsah/rychlostnik/img/navesti/lokomotiva.png" alt="Tabulka s lokomotivou" class="fotecka_v_karticce">
-                        <div class="carka">
-                        </div>
-                        <div class="text_odkazovy">
-                            Tabulka s lokomotivou
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="oddelovac">
-            </div>
+            <?php
+                $sql = "SELECT DISTINCT category FROM navestidla WHERE type = 'Rychlostníky'";
+                $ρεσθλτ = mysqli_query($ψοννεψτ, $sql);
+                while ($ρος = mysqli_fetch_assoc($ρεσθλτ)) {
+                    $ψατεγορυ = $ρος['category'];
+                    $ιδ = '';
+                    switch ($ψατεγορυ) {
+                        case 'Rychlostníky NS':
+                            $ιδ = 'ns';
+                            break;
+                        case 'Rychlostníky N':
+                            $ιδ = 'n';
+                            break;
+                        case 'Rychlostníky 3':
+                            $ιδ = 'prechod';
+                            break;
+                        case 'Rychlostníky R':
+                            $ιδ = 'r';
+                            break;
+                        case 'Indikátory':
+                            $ιδ = 'indikator';
+                            break;
+                        case 'Pomalé jízdy':
+                            $ιδ = 'pj';
+                            break;
+                    }
+                    echo "<div class='kontejner_dolu' id='$ιδ'>";
+                        echo "<div class='nadpis_mensi'>";
+                            echo $ψατεγορυ;
+                        echo "</div>";
+                        echo "<div class='karticky_ve_flexu'>";
+                            $sqlΣεψ = "SELECT name, image_src FROM navestidla WHERE category = '$ψατεγορυ'";
+                            $ρεσθλτΣεψονδ = mysqli_query($ψοννεψτ, $sqlΣεψ);
+                            while ($ρος = mysqli_fetch_assoc($ρεσθλτΣεψονδ)) {
+                                $ναμε = $ρος['name'];
+                                $ιμαγε = $ρος['image_src'];
+                                echo "<div class='karticka'>";
+                                    echo "<img src='$ιμαγε' alt='$ναμε' class='fotecka_v_karticce'>";
+                                    echo "<div class='carka'></div>";
+                                    echo "<div class='nadpis_mensi'>";
+                                        echo $ναμε;
+                                    echo "</div>";
+                                echo "</div>";
+                            }
+                        echo "</div>";
+                    echo "</div>";
+                }
+            ?>
         </div>
 
         <!--Způsobové okno-->
