@@ -172,15 +172,11 @@
         <!--Obsah-->
         <div class="kontejner_dolu">
             <div class="oddelovac">
-                
             </div>
-            
             <div class="nadpis">
                 Test na návěsti
             </div>
-            <div class="vybersi" id="next">
-                Další otázka
-            </div>
+            
             <div class='test_kontejner' id='test'>
                 <?php
                     $sql = "SELECT name, image_src, answer_one, answer_two, answer_three FROM navestidla_test WHERE idnavestidla_test = $selectedAnswer";
@@ -219,6 +215,9 @@
                         echo "</div>";
                     }
                 ?>
+            </div>
+            <div class="vybersi" id="next">
+                Další otázka
             </div>
             <div class="oddelovac">
             </div>
