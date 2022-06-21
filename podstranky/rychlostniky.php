@@ -201,7 +201,7 @@
         </div>
 
         <!--Způsobové okno-->
-        <div id="zpusobovy_nositel">
+        <div id="zpusobovy_nositel" class="nic">
             <div class="zavirac" onclick="zpusobove_okno()">
             </div>
             <div class="kontejner_zpusobovy">
