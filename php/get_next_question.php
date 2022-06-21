@@ -3,17 +3,17 @@
     session_start();
     $connect = new mysqli($host, $user, $psw, $db);
     $answers = $_SESSION["answers"];
-    $selectedAnswer = rand(1, 4);
+    $selectedAnswer = rand(1, 6);
     echo "<script>console.log(".json_encode($answers).");</script>";
     echo "<script>console.log(".json_encode($selectedAnswer).");</script>";
-    if (count($answers) == 4) {
+    if (count($answers) == 6) {
         while ($answers[3] == $selectedAnswer) {
-            $selectedAnswer = rand(1, 4);
+            $selectedAnswer = rand(1, 6);
         }
         $answers = array($selectedAnswer);
     } else {
         while (in_array($selectedAnswer, $answers)) {
-            $selectedAnswer = rand(1, 4);
+            $selectedAnswer = rand(1, 6);
         }
         array_push($answers, $selectedAnswer);
     }

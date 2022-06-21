@@ -88,6 +88,14 @@
             </div>
             <div class="nic" id="interier_popupu">
                 <div class="vybirac">
+                    <span class="material-icons krizek" onclick="vybirac('r')" id="r_vybirac">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Rychlostníky R
+                    </span>
+                </div>
+                <div class="vybirac">
                     <span class="material-icons krizek" onclick="vybirac('ns')" id="ns_vybirac">
                         clear
                     </span>
@@ -104,27 +112,11 @@
                     </span>
                 </div>
                 <div class="vybirac">
-                    <span class="material-icons krizek" onclick="vybirac('r')" id="r_vybirac">
-                        clear
-                    </span>
-                    <span class="vybiraci_text">
-                        Rychlostníky R
-                    </span>
-                </div>
-                <div class="vybirac">
                     <span class="material-icons krizek" onclick="vybirac('prechod')" id="prechod_vybirac">
                         clear
                     </span>
                     <span class="vybiraci_text">
                         Rychlostníky 3. přechodové skupiny
-                    </span>
-                </div>
-                <div class="vybirac">
-                    <span class="material-icons krizek" onclick="vybirac('indikator')" id="indikator_vybirac">
-                        clear
-                    </span>
-                    <span class="vybiraci_text">
-                        Indikátory
                     </span>
                 </div>
                 <div class="vybirac">
@@ -135,6 +127,15 @@
                         Pomalé jízdy
                     </span>
                 </div>
+                <div class="vybirac">
+                    <span class="material-icons krizek" onclick="vybirac('indikator')" id="indikator_vybirac">
+                        clear
+                    </span>
+                    <span class="vybiraci_text">
+                        Indikátory
+                    </span>
+                </div>
+                
             </div>
         </div>
 

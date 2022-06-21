@@ -2,7 +2,7 @@
     include "../php/data.php";
     session_start();
     $connect = new mysqli($host, $user, $psw, $db);
-    $selectedAnswer = rand(1, 4);
+    $selectedAnswer = rand(1, 6);
     $answers = array($selectedAnswer);
     $_SESSION["answers"] = $answers;
     $_SESSION["selectedAnswer"] = $selectedAnswer;
