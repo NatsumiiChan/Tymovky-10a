@@ -11,6 +11,51 @@
         <meta name="description" content="Návěstidla">
         <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
         <title>Hledaní návěstí</title>
+        <script 
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+            crossorigin="anonymous">
+        </script>
+        <script>
+            function search() {
+                var white = document.getElementById("bila").className;
+                var blue = document.getElementById("modra").className;
+                var boxThingy = document.getElementById("dalsi").className;
+                var searchIndex = "";
+
+                switch (white) {
+                    case "barvicky posun_dovolen":
+                        searchIndex += 'A';
+                        break;
+                    case "barvicky":
+                        searchIndex += '-';
+                        break;
+                }
+                switch (blue) {
+                    case "barvicky posun_zakazan":
+                        searchIndex += 'N';
+                        break;
+                    case "barvicky":
+                        searchIndex += '-';
+                        break;
+                }
+                switch (boxThingy) {
+                    case "skupina skupina_true":
+                        searchIndex += 'T';
+                        break;
+                    case "skupina":
+                        searchIndex += '-';
+                        break;
+                }
+                console.log(searchIndex);
+                
+                $(document).ready(function (){
+                    $("#text").load("../php/search.php", {
+                        searchNewIndex: searchIndex
+                    });
+                })
+            }
+        </script>
     </head>
     <body id="body">
         
@@ -99,6 +144,10 @@
                     </div>
                 </div>
             </div>
+            <div class="vybersi" id="search" onclick="search()">
+                Hledat
+            </div>
+            <div id="text"></div>
         </div>
 
         <!--Způsobové okno--> <!-- Tohle vyskočí a buď to popře existenci návěsti ve jménu SŽDC a vyvolá ďábla nebo jí to najde v D1 a vyvolá ďábla-->
