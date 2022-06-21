@@ -146,7 +146,7 @@
             <div class="pismenka_za_sebou">
                 Zde je přehled rychlostníků a pomalých jízd.
             </div>
-            <div class="tlacitko_zpusobove" onclick="zpusobove_okno('zpusobovy_nositel')">
+            <div class="tlacitko_zpusobove" onclick="zpusobove_okno()">
                 Doplňující informace
             </div>
             <!--Obsah obsahu-->
@@ -186,7 +186,7 @@
                             while ($ρος = mysqli_fetch_assoc($ρεσθλτΣεψονδ)) {
                                 $ναμε = $ρος['name'];
                                 $ιμαγε = $ρος['image_src'];
-                                echo "<div class='karticka' onclick=\"zpusobove_okno('$ναμε')\">";
+                                echo "<div class='karticka'>";
                                     echo "<img src='$ιμαγε' alt='$ναμε' class='fotecka_v_karticce'>";
                                     echo "<div class='carka'></div>";
                                     echo "<div class='nadpis_mensi'>";
@@ -202,10 +202,10 @@
 
         <!--Způsobové okno-->
         <div id="zpusobovy_nositel">
-            <div class="zavirac" onclick="zpusobove_okno('zpusobovy_nositel')">
+            <div class="zavirac" onclick="zpusobove_okno()">
             </div>
             <div class="kontejner_zpusobovy">
-                <div id="zaviratel" class="material-icons" onclick="zpusobove_okno('zpusobovy_nositel')">
+                <div id="zaviratel" class="material-icons" onclick="zpusobove_okno()">
                     close
                 </div>
                 <div class="kontejner_zpusobovy_dolu">
@@ -297,24 +297,6 @@
                 </div>
             </div>
         </div>
-        <?php
-            $sql = "SELECT name, description FROM navestidla WHERE type = 'Rychlostníky'";
-            $ρεσθλτ = mysqli_query($ψοννεψτ, $sql);
-            while ($row = mysqli_fetch_array($ρεσθλτ)) {
-                $ναμε = $row['name'];
-                $δεσψριπτιον = $row['description'];
-
-                echo "<div id='$ναμε'>";
-                    echo "<div class='zavirac' onclick=\"zpusobove_okno('$ναμε')\"></div>";
-                    echo "<div id='zaviratel' class='material-icons' onclick=\"zpusobove_okno('$ναμε')\">close</div>";
-                    echo "<div class='kontejner_zpusobovy_dolu'>";
-                        echo "<div class='nadpis'>$ναμε</div>";
-                        echo "<div class='oddelovac'></div>";
-                        echo "<div class='pismenka_za_sebou'>$δεσψριπτιον</div>";
-                    echo "</div>";
-                echo "</div>";
-            }
-        ?>
 
         <!--Zápatí-->
         <div class="kontejner_dolu">
